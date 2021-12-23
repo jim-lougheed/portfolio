@@ -11,15 +11,25 @@ body {
 h1 {
   color: #66BFBF;
   font-family: "Georama", serif;
-  font-size: 500%;
   line-height: 1.5;
   margin-top: 50px;
+  @include sizings.mobile {
+    font-size: 1.25rem;
+  }
+  @include sizings.tabdesk {
+    font-size: 2.5rem;  
+  }
 }
 
 h2 {
   color: #66BFBF;
   font-family: "Courgette";
-  font-size: 2.5rem;
+  @include sizings.mobile {
+    font-size: 1rem;
+  }
+  @include sizings.tabdesk {
+    font-size: 1.5rem;  
+  }
 }
 
 h3 {
@@ -35,9 +45,8 @@ hr {
 }
 
 a {
-  color: #11999E;
-  font-size: 1.5em;
-  margin: 10px 20px;
+  // color: #11999E;
+  // margin: 10px 20px;
   text-decoration: none;
 }
 
@@ -47,16 +56,6 @@ a:hover {
 
 p {
   line-height: 2;
-}
-
-.header-container {
-  
-}
-
-.profile {
-  margin: auto;
-  width: 30%;
-
 }
 
 .skill-row {
@@ -71,7 +70,7 @@ p {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 10px;
+    border: 5px;
     border-style: solid;
     display: block;
     height: 28vw;
@@ -80,15 +79,15 @@ p {
   }
   &__header {
     @include sizings.mobile {
-      font-size: 2rem;
-      margin: 0;
+      margin: 0.15vw;
+    }
+    @include sizings.tabdesk {
+      margin-top: 4vw;
+      margin-bottom: 0;
     }
   }
   &__subheader {
-    @include sizings.mobile {
-      font-size: 1.25rem;
-      margin: 0;
-    }
+    margin: 0;
   }
   &__astronaut {
     height: 15vw;
@@ -111,6 +110,57 @@ p {
     @include sizings.mobile {
       width: 20%;
     }
+    
+  }
+}
+
+.profile {
+  margin: 11vw auto;
+  @include sizings.mobile {
+    width: 70%;
+  }
+  @include sizings.tabdesk {
+    width: 30%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 70%;
+  }
+  &__description {
+    @include sizings.tabdesk {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.projects {
+  &__row {
+    margin: 100px auto;
+    text-align: left;
+    width: 50%;
+  }
+  &__kitchen-companion {
+    border-radius: 50%;
+    float: left;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 30px;
+    width: 200px;
+  }
+  &__simon-game {
+    border-radius: 50%;
+    float: right;
+    height: 200px;
+    object-fit: cover;
+    margin-left: 30px;
+    width: 200px;
+  }
+  &__dino-game {
+    border-radius: 50%;
+    float: left;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 30px;
+    width: 200px;
   }
 }
 

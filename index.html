@@ -18,7 +18,7 @@
   <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-  <header>
+  <header class="header">
     <div class="header__container">
       <h1 class="header__header">I'm Jim.</h1>
       <h2 class="header__subheader" id=aProgrammer>a programmer/linguist</h2>
@@ -28,10 +28,35 @@
     </div>
   </header>
   <div class="profile">
-    
-    <h2>Hi!</h2>
-    <p>I'm a translator-turned-programmer who has a passion for language, both human and computer. It's all about communication.</p>
+    <p class="profile__description">I'm a translator-turned-developer who has a passion for languages, both human and computer. I love to explore the ways through which we encode and decode the messages we convey to each other.</p>
   </div>
+  <hr>
+  <div class="projects">
+    <h2>My Projects</h2>
+    <div class="projects__row">
+        <a href="https://kitchen-companion.herokuapp.com/">
+          <img class="projects__kitchen-companion" src="images/kitchen-companion.jpg" alt="languages">
+        </a>
+        <a href="https://kitchen-companion.herokuapp.com/">
+          <h3>KitchenCompanion</h3>
+        </a>
+        <p class="project__description">KitchenCompanion Customizable Cookbook is a React web application that assists users in finding countless recipe ideas based on ingredients on hand and helps them decide "What am I going to make for dinner tonight?"</p>
+      </div>
+      <div class="projects__row">
+        <a href="https://jim-lougheed.github.io/SimonGame/">
+          <img class="projects__simon-game" src="images/simon-game.png" alt="baking">
+        </a>
+          <h3>The Simon Game</h3>
+          <p class="projects__description">A challenge project from Angela Yu's <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/">Complete Web Development Bootcamp</a>, this simple JavaScript game is simple to play. With each turn, a square will light up and add to a sequence. It is your job to remember the sequence and click the corresponding squares as it continues to get longer and longer.</p>
+      </div>
+      <div class="projects__row">
+        <a href="https://jim-lougheed.github.io/dino-game/">
+          <img class="projects__dino-game" src="images/dino-game.png" alt="piano">
+        </a>
+        <h3>Dino Game</h3>
+        <p class="projects__description">This clone of the Chrome Dino game is based on a JavaScript tutorial from <a href="https://www.youtube.com/watch?v=47eXVRJKdkU">Web Dev Simplified</a> but created using React. Press any key to start running and jump over the oncoming cacti!</p>
+      </div>
+    </div>
   <hr>
   <div class="skills">
     <h2>My Skills</h2>

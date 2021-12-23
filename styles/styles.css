@@ -9,15 +9,33 @@ body {
 h1 {
   color: #66BFBF;
   font-family: "Georama", serif;
-  font-size: 500%;
   line-height: 1.5;
   margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
 }
 
 h2 {
   color: #66BFBF;
   font-family: "Courgette";
-  font-size: 2.5rem;
+}
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 
 h3 {
@@ -33,9 +51,6 @@ hr {
 }
 
 a {
-  color: #11999E;
-  font-size: 1.5em;
-  margin: 10px 20px;
   text-decoration: none;
 }
 
@@ -45,11 +60,6 @@ a:hover {
 
 p {
   line-height: 2;
-}
-
-.profile {
-  margin: auto;
-  width: 30%;
 }
 
 .skill-row {
@@ -63,7 +73,7 @@ p {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 10px;
+  border: 5px;
   border-style: solid;
   display: block;
   height: 28vw;
@@ -72,15 +82,17 @@ p {
 }
 @media screen and (max-width: 767px) {
   .header__header {
-    font-size: 2rem;
-    margin: 0;
+    margin: 0.15vw;
   }
 }
-@media screen and (max-width: 767px) {
-  .header__subheader {
-    font-size: 1.25rem;
-    margin: 0;
+@media screen and (min-width: 768px) {
+  .header__header {
+    margin-top: 4vw;
+    margin-bottom: 0;
   }
+}
+.header__subheader {
+  margin: 0;
 }
 .header__astronaut {
   height: 15vw;
@@ -105,6 +117,63 @@ p {
   .header__avatar {
     width: 20%;
   }
+}
+
+.profile {
+  margin: 11vw auto;
+}
+@media screen and (max-width: 767px) {
+  .profile {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .profile {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .profile {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .profile__description {
+    font-size: 1.5rem;
+  }
+}
+
+.projects__row {
+  margin: 100px auto;
+  text-align: left;
+  width: 50%;
+}
+.projects__kitchen-companion {
+  border-radius: 50%;
+  float: left;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 30px;
+  width: 200px;
+}
+.projects__simon-game {
+  border-radius: 50%;
+  float: right;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 30px;
+  width: 200px;
+}
+.projects__dino-game {
+  border-radius: 50%;
+  float: left;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 30px;
+  width: 200px;
 }
 
 .language {
