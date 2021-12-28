@@ -1,13 +1,13 @@
 body {
-  background-color: #EED3EF;
-  color: #40514E;
+  background-color: #eed3ef;
+  color: #40514e;
   font-family: "Georama", sans-serif;
   margin: auto;
   text-align: center;
 }
 
 h1 {
-  color: #66BFBF;
+  color: #66bfbf;
   font-family: "Georama", serif;
   line-height: 1.5;
   margin-top: 50px;
@@ -24,22 +24,22 @@ h1 {
 }
 
 h2 {
-  color: #66BFBF;
+  color: #66bfbf;
   font-family: "Courgette";
 }
 @media screen and (max-width: 767px) {
   h2 {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 768px) {
   h2 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 }
 
 h3 {
-  color: #11999E;
+  color: #11999e;
   font-family: "Josefin Slab";
 }
 
@@ -55,17 +55,11 @@ a {
 }
 
 a:hover {
-  color: #EAF6F6;
+  color: #eaf6f6;
 }
 
 p {
   line-height: 2;
-}
-
-.skill-row {
-  margin: 100px auto;
-  text-align: left;
-  width: 50%;
 }
 
 .header__container {
@@ -92,7 +86,19 @@ p {
   }
 }
 .header__subheader {
+  color: #66bfbf;
+  font-family: "Courgette";
   margin: 0;
+}
+@media screen and (max-width: 767px) {
+  .header__subheader {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__subheader {
+    font-size: 1.5rem;
+  }
 }
 .header__astronaut {
   height: 15vw;
@@ -137,6 +143,17 @@ p {
     width: 70%;
   }
 }
+.profile__link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile__link {
+  font-size: 1.5rem;
+}
+.profile__link-break {
+  margin: 0 2rem;
+}
 @media screen and (min-width: 768px) {
   .profile__description {
     font-size: 1.5rem;
@@ -145,82 +162,71 @@ p {
 
 .projects__row {
   margin: 100px auto;
+  padding-bottom: 1rem;
   text-align: left;
   width: 50%;
 }
-.projects__kitchen-companion {
+@media screen and (max-width: 767px) {
+  .projects__title {
+    text-align: center;
+  }
+}
+.projects__project {
   border-radius: 50%;
-  float: left;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-right: 30px;
   width: 200px;
 }
-.projects__simon-game {
-  border-radius: 50%;
-  float: right;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-left: 30px;
-  width: 200px;
-}
-.projects__dino-game {
-  border-radius: 50%;
-  float: left;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-right: 30px;
-  width: 200px;
+@media screen and (min-width: 768px) {
+  .projects__project--odd {
+    float: left;
+    margin-right: 30px;
+  }
+  .projects__project--even {
+    float: right;
+    margin-left: 30px;
+  }
 }
 
-.language {
+.skills__row {
+  margin: 100px auto;
+  padding-bottom: 1rem;
+  text-align: left;
+  width: 50%;
+}
+@media screen and (max-width: 767px) {
+  .skills__title {
+    text-align: center;
+  }
+}
+.skills__skill {
   border-radius: 50%;
-  float: left;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-right: 30px;
   width: 200px;
 }
-
-.baking {
-  border-radius: 50%;
-  float: right;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-left: 30px;
-  width: 200px;
+@media screen and (min-width: 768px) {
+  .skills__skill--odd {
+    float: left;
+    margin-right: 30px;
+  }
+  .skills__skill--even {
+    float: right;
+    margin-left: 30px;
+  }
 }
 
-.piano {
-  border-radius: 50%;
-  float: left;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  margin-right: 30px;
-  width: 200px;
-}
-
-.bottom-container {
-  background-color: #66BFBF;
-  padding: 80px 0 20px;
-  width: auto;
-}
-
-.btn {
-  background: #11CDD4;
-  background-image: -o-linear-gradient(top, #11CDD4, #11999E);
-  background-image: -webkit-gradient(to bottom, #11CDD4, #11999E);
+.cta__btn {
+  background: #11cdd4;
+  background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -webkit-gradient(to bottom, #11cdd4, #11999e);
   border-radius: 20px;
-  color: #EAF6F6;
+  color: #eaf6f6;
   font-family: "Josefin Slab";
   font-size: 23px;
-  font-weight: 400;
+  font-weight: bold;
   margin: 50px auto;
   box-shadow: 1px 1px 20px 0 #000000;
   text-shadow: 1px 1px 20px #000000;
@@ -230,21 +236,31 @@ p {
   cursor: pointer;
   text-align: center;
 }
-
-.btn:hover {
-  background: #30E3CB;
-  background-image: -o-linear-gradient(top, #30E3CB, #2BC4AD);
-  background-image: -webkit-gradient(to bottom, #30E3CB, #2BC4AD);
+.cta__btn:hover {
+  background: #30e3cb;
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -webkit-gradient(to bottom, #30e3cb, #2bc4ad);
   border-radius: 20px;
   text-decoration: none;
 }
 
-.copyright {
-  color: #EAF6F6;
-  font-size: 0.75em;
-  padding: 20px 0;
+.footer {
+  background-color: #66bfbf;
+  padding: 20px 0 10px;
+  width: auto;
 }
-
-#aProgrammer {
-  font-weight: normal;
+.footer__link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__link {
+  margin: 0 0.5rem;
+}
+.footer__icon {
+  width: 2rem;
+}
+.footer__copyright {
+  color: #eaf6f6;
+  font-size: 0.75em;
 }/*# sourceMappingURL=styles.css.map */

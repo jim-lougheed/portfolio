@@ -8,11 +8,11 @@
   <meta name="author" content="Jim">
   <meta name="keywords" content="so professional">
   <link rel="stylesheet" href="styles/styles.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="manifest" href="images/site.webmanifest">
-  <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/images/favicon-16x16.png">
+  <link rel="manifest" href="images/images/site.webmanifest">
+  <link rel="mask-icon" href="images/images/safari-pinned-tab.svg" color="#5bbad5">
   <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Georama:wght@200&family=Josefin+Slab:wght@300&display=swap" rel="stylesheet">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
@@ -22,76 +22,93 @@
     <div class="header__container">
       <h1 class="header__header">I'm Jim.</h1>
       <h2 class="header__subheader" id=aProgrammer>a programmer/linguist</h2>
-      <img class="header__astronaut" src="images/astronaut.png" alt="astronaut-img">
-      <img class="header__nebula" src="images/nebula.png" alt="nebula-img">
-      <img class="header__avatar" src="images/android-chrome-192x192.png" alt="Jim">
+      <img class="header__astronaut" src="images/images/astronaut.png" alt="astronaut-img">
+      <img class="header__nebula" src="images/images/nebula.png" alt="nebula-img">
+      <img class="header__avatar" src="images/images/android-chrome-192x192.png" alt="Jim">
     </div>
   </header>
   <div class="profile">
+    <div class="profile__link-container">
+      <a href="#myProjects" class="profile__link">Projects</a>
+      <p class="profile__link-break">|</p>
+      <a href="#mySkills" class="profile__link">Skills</a>
+    </div>
     <p class="profile__description">I'm a translator-turned-developer who has a passion for languages, both human and computer. I love to explore the ways through which we encode and decode the messages we convey to each other.</p>
   </div>
   <hr>
-  <div class="projects">
+  <div class="projects" id="myProjects">
     <h2>My Projects</h2>
     <div class="projects__row">
         <a href="https://kitchen-companion.herokuapp.com/">
-          <img class="projects__kitchen-companion" src="images/kitchen-companion.jpg" alt="languages">
+          <img class="projects__project--odd projects__project" src="images/images/kitchen-companion.jpg" alt="languages">
         </a>
-        <a href="https://kitchen-companion.herokuapp.com/">
+        <a href="https://kitchen-companion.herokuapp.com/" class="projects__title">
           <h3>KitchenCompanion</h3>
         </a>
         <p class="project__description">KitchenCompanion Customizable Cookbook is a React web application that assists users in finding countless recipe ideas based on ingredients on hand and helps them decide "What am I going to make for dinner tonight?"</p>
       </div>
       <div class="projects__row">
         <a href="https://jim-lougheed.github.io/SimonGame/">
-          <img class="projects__simon-game" src="images/simon-game.png" alt="baking">
+          <img class="projects__project--even projects__project" src="images/images/simon-game.png" alt="baking">
         </a>
+        <a href="https://jim-lougheed.github.io/SimonGame/" class="projects__title">
           <h3>The Simon Game</h3>
-          <p class="projects__description">A challenge project from Angela Yu's <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/">Complete Web Development Bootcamp</a>, this simple JavaScript game is simple to play. With each turn, a square will light up and add to a sequence. It is your job to remember the sequence and click the corresponding squares as it continues to get longer and longer.</p>
+        </a>
+        <p class="projects__description">A challenge project from Angela Yu's <a href="https://www.udemy.com/course/the-complete-web-development-bootcamp/">Complete Web Development Bootcamp</a>, this simple JavaScript game is simple to play. With each turn, a square will light up and add to a sequence. It is your job to remember the sequence and click the corresponding squares as it continues to get longer and longer.</p>
       </div>
       <div class="projects__row">
         <a href="https://jim-lougheed.github.io/dino-game/">
-          <img class="projects__dino-game" src="images/dino-game.png" alt="piano">
+          <img class="projects__project--odd projects__project" src="images/images/dino-game.png" alt="piano">
         </a>
-        <h3>Dino Game</h3>
+        <a href="https://jim-lougheed.github.io/dino-game/" class="projects__title">
+          <h3>Dino Game</h3>
+        </a>
         <p class="projects__description">This clone of the Chrome Dino game is based on a JavaScript tutorial from <a href="https://www.youtube.com/watch?v=47eXVRJKdkU">Web Dev Simplified</a> but created using React. Press any key to start running and jump over the oncoming cacti!</p>
       </div>
     </div>
   <hr>
-  <div class="skills">
+  <div class="skills" id="mySkills">
     <h2>My Skills</h2>
-    <div class="skill-row">
-        <img class="language" src="images/languages.jpg" alt="languages">
-        <h3>Language</h3>
-        <p class="skill-description">I'm obsessed with the vast number of ways we can use sounds and sketchings to transport complex ideas to one another. Nothing excites me more than examining new words for familiar concepts, new scripts containing familiar thoughts, or new slang to replace standard messages.</p>
+    <div class="skills__row">
+      <img class="skills__skill skills__skill--odd" src="images/images/code.jpeg" alt="web development">
+      <h3 class="skills__title">Web Development</h3>
+      <p class="skill-description">Earlier this year, a couple good friends turned me onto the world of web development after I shared that I was looking for a new challenge in my career. Although my previous roles were challenging in their own ways, I wanted to gain skills that required me to create something with my own two hands. And having done a lot of my learning about languages and keyboards of other types, coding seemed like a natural way to flex my creativity. With each day, I learn more, build more and grow more curious about the endless applications of web development.</p>
+    </div>
+    <div class="skills__row">
+        <img class="skills__skill skills__skill--even" src="images/images/languages.jpg" alt="languages">
+        <h3 class="skills__title">Language</h3>
+        <p class="skill-description">I'm obsessed with the vast number of ways we can use sounds and symbols to convey complex ideas to one another, and often without even thinking about it. Nothing excites me more than examining new words for familiar concepts, new scripts containing familiar thoughts, or new slang to replace standard messages.</p>
       </div>
-      <div class="skill-row">
-          <img class="baking" src="images/cake.jpg" alt="baking">
-          <h3>Baking</h3>
-          <p class="skill-description">My spoiled sweettooth is my undoing... But it is also now a strength. Thanks to the Great Canadian Baking Show, I have sank my teeth into the world of making elegant and sugary desserts (and then sank my teeth into the desserts themselves!). I've come a long way, but have a lot of recipes more to bake to earn the title of Star Baker.</p>
+      <div class="skills__row">
+          <img class="skills__skill skills__skill--odd" src="images/images/cake.jpg" alt="baking">
+          <h3 class="skills__title">Baking</h3>
+          <p class="skill-description">It's no secret I have a sweettooth, nor is it that it is spoiled with desserts and goodies. Due in part to the Great Canadian Baking Show, I have sank my teeth into the world of creating elegant and sugary desserts (and then enjoy sinking my teeth into the desserts themselves!). I've come a long way, but I have a lot to learn and bake before I earn the title of Star Baker.</p>
       </div>
-      <div class="skill-row">
-        <img class="piano" src="images/piano.jpg" alt="piano">
-        <h3>Piano</h3>
-        <p class="skill-description">Sitting down at the bench and transforming scribblings into melodies is like stepping into another world. Since I was a wee lad, I have been in love with the feeling of music emanating from my own fingers. It's a beautiful thing.</p>
+      <div class="skills__row">
+        <img class="skills__skill skills__skill--even" src="images/images/piano.jpg" alt="piano">
+        <h3 class="skills__title">Piano</h3>
+        <p class="skill-description">Sitting down at the bench and transforming scribblings into melodies transports me to another world. Since I was a wee lad, I have been in love with the feeling of music emanating from my fingers. It's a beautiful thing.</p>
       </div>
     </div>
     <hr>
-    <div class="contact-me">
-      <h2>Get In Touch</h2>
-      <h3>Let's chat language, or technology, or science, or books, or...</h3>
-      <p>Curiosity is what killed the cat. But it is also what motivated the Jim. Let's be curious together!</p>
-      <a class="btn" href="mailto:jglougheed@gmail.com">CONTACT ME</a>
+    <div class="cta">
+      <h2>Let's Chat</h2>
+      <h3>Whether is be about technology, linguistics, science, books, or whatever else, I'm always down for an exchange of ideas</h3>
+      <p>It's curiosity that killed the cat. But it is also what motivated the Jim. Let's be curious together!</p>
+      <a class="cta__btn" href="mailto:jglougheed@gmail.com">CONTACT ME</a>
     </div>
     </div>
 
 
-  <div class="bottom-container">
-    <a class="footer-link" href="https://www.linkedin.com/in/james-lougheed-9a350822/">LinkedIn</a>
-    <a class="footer-link" href="https://www.instagram.com/fader08/?hl=en">Instagram</a>
-    <br>
-    <br>
-    <p class="copyright">© 2021 Jim Lougheed.</p>
+  <div class="footer">
+    <div class="footer__link-container">
+      <a class="footer__link" href="mailto:jglougheed@gmail.com"><img src="images/icons/envelope-regular.svg" alt="email icon" class="footer__icon"></a>
+      <a class="footer__link" href="https://www.linkedin.com/in/jim-lougheed/"><img src="images/icons/linkedin-brands.svg" alt="linkedin icon" class="footer__icon"></a>
+      <a class="footer__link" href="https://github.com/jim-lougheed"><img src="images/icons/github-square-brands.svg" alt="github icon" class="footer__icon"></a>
+      <a class="footer__link" href="https://twitter.com/JimsCodes"><img src="images/icons/twitter-square-brands.svg" alt="twitter icon" class="footer__icon"></a>
+      <a class="footer__link" href="https://www.instagram.com/fader08/?hl=en"><img src="images/icons/instagram-square-brands.svg" alt="instagram icon" class="footer__icon"></a>
+    </div>
+    <p class="footer__copyright">© 2021 Jim Lougheed.</p>
   </div>
 
 
