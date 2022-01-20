@@ -16,23 +16,48 @@
   <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Georama:wght@200&family=Josefin+Slab:wght@300&display=swap" rel="stylesheet">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
+  <script src='index.js' defer></script>
 </head>
 <body>
+  <nav class='navbar navbar-light'>
+    <a class='navbar-brand' href='#'>jim lougheed</a>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-hidden" id='navbar-nav'>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#myProjects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#mySkills">Interests</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Fun Stuff</a>
+        </li>
+      </ul>
+    </div>
+    <button class="navbar-toggler navbar-hidden" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
   <header class="header">
-    <div class="header__container">
+    <div class="header__container header__container--hero header__container--before"></div>
+    <div class="header__container header__container--bio">
       <h1 class="header__header">I'm Jim.</h1>
       <h2 class="header__subheader" id=aProgrammer>a programmer/linguist</h2>
-      <img class="header__astronaut" src="images/images/astronaut.png" alt="astronaut-img">
-      <img class="header__nebula" src="images/images/nebula.png" alt="nebula-img">
       <img class="header__avatar" src="images/images/android-chrome-192x192.png" alt="Jim">
+      <div class="profile__link-container">
+        <a href="#myProjects" class="profile__link">Projects</a>
+        <p class="profile__link-break">|</p>
+        <a href="#mySkills" class="profile__link">Interests</a>
+        <p class="profile__link-break">|</p>
+        <a href="#mySkills" class="profile__link">Fun Stuff</a>
+      </div>
+    </div>
+    <div class="header__container header__container--hero header__container--after"></div>
     </div>
   </header>
   <div class="profile">
-    <div class="profile__link-container">
-      <a href="#myProjects" class="profile__link">Projects</a>
-      <p class="profile__link-break">|</p>
-      <a href="#mySkills" class="profile__link">Skills</a>
-    </div>
+    
     <p class="profile__description">I'm a translator-turned-developer who has a passion for languages, both human and computer. I love to explore the ways through which we encode and decode the messages we convey to each other.</p>
   </div>
   <hr>

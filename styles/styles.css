@@ -62,17 +62,81 @@ p {
   line-height: 2;
 }
 
+.navbar {
+  background-color: #66bfbf;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Courgette";
+}
+.navbar-brand {
+  align-self: center;
+  color: #fff;
+  font-size: 2rem;
+  margin: 1rem 2rem;
+}
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem;
+  width: 30vw;
+}
+@media screen and (max-width: 767px) {
+  .navbar-nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+.header {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .header {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+  }
+}
 .header__container {
-  background: url("https://img.freepik.com/free-vector/earth-space-scene_1308-32313.jpg?size=626&ext=jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: 5px;
-  border-style: solid;
-  display: block;
-  height: 28vw;
-  padding-top: 2rem;
-  position: relative;
+  height: 25vw;
+}
+@media screen and (max-width: 767px) {
+  .header__container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__container {
+    width: 50%;
+  }
+}
+.header__container--hero {
+  background: url("../images/images/hero.png");
+}
+@media screen and (min-width: 768px) {
+  .header__container--before {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__container--after {
+    display: none;
+  }
 }
 @media screen and (max-width: 767px) {
   .header__header {
@@ -100,24 +164,9 @@ p {
     font-size: 1.5rem;
   }
 }
-.header__astronaut {
-  height: 15vw;
-  position: absolute;
-  left: 10vw;
-  top: 10vw;
-}
-.header__nebula {
-  height: 10vw;
-  position: absolute;
-  right: 10vw;
-  top: 10vw;
-}
 .header__avatar {
   border-radius: 50%;
   border: solid 3px black;
-  position: absolute;
-  bottom: 0;
-  transform: translate(-50%, 50%);
 }
 @media screen and (max-width: 767px) {
   .header__avatar {

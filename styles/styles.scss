@@ -58,18 +58,76 @@ p {
   line-height: 2;
 }
 
+.navbar {
+  background-color: #66bfbf;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Courgette";
+  &-brand {
+    align-self: center;
+    color: #fff;
+    font-size: 2rem;
+    margin: 1rem 2rem;
+  }
+  &-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    width: 30vw;
+    @include sizings.mobile {
+      display: none;
+    }
+  }
+  &-toggler {
+    @include sizings.tabdesk {
+      display: none;
+    }
+  }
+}
+
+.nav-item {
+  list-style: none;
+}
+.nav-link {
+  color: #fff;
+}
+
 .header {
+  display: flex;
+  @include sizings.mobile {
+    flex-direction: column;
+  }
+  @include sizings.tabdesk {
+    flex-direction: row;
+  }
   &__container {
-    background: url("https://img.freepik.com/free-vector/earth-space-scene_1308-32313.jpg?size=626&ext=jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 5px;
-    border-style: solid;
-    display: block;
-    height: 28vw;
-    padding-top: 2rem;
-    position: relative;
+    // background-position: center;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    height: 25vw;
+
+    @include sizings.mobile {
+      width: 100%;
+    }
+    @include sizings.tabdesk {
+      width: 50%;
+    }
+    &--hero {
+      // background: url("https://img.freepik.com/free-vector/earth-space-scene_1308-32313.jpg?size=626&ext=jpg");
+      background: url("../images/images/hero.png");
+      // border: 5px;
+      // border-style: solid;
+    }
+    &--before {
+      @include sizings.tabdesk {
+        display: none;
+      }
+    }
+    &--after {
+      @include sizings.mobile {
+        display: none;
+      }
+    }
   }
   &__header {
     @include sizings.mobile {
@@ -91,24 +149,9 @@ p {
     }
     margin: 0;
   }
-  &__astronaut {
-    height: 15vw;
-    position: absolute;
-    left: 10vw;
-    top: 10vw;
-  }
-  &__nebula {
-    height: 10vw;
-    position: absolute;
-    right: 10vw;
-    top: 10vw;
-  }
   &__avatar {
     border-radius: 50%;
     border: solid 3px black;
-    position: absolute;
-    bottom: 0;
-    transform: translate(-50%, 50%);
     @include sizings.mobile {
       width: 20%;
     }
