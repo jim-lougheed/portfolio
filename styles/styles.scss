@@ -285,32 +285,45 @@ p {
     padding: 5rem 0 2rem;
     text-align: center;
   }
+}
 
-  &__interest {
+.carousel-inner {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.interest {
+  &__image {
     border-radius: 50%;
     height: 200px;
     object-fit: cover;
     width: 200px;
-    @include sizings.tabdesk {
-      &--odd {
-        float: left;
-        margin-right: 30px;
-      }
-      &--even {
-        float: right;
-        margin-left: 30px;
-      }
-    }
   }
-}
-
-.interest {
-  &-description {
+  &__description {
     color: #40514e;
   }
   &__item {
     color: #40514e;
-    height: 300px;
+    height: 275px;
+    display: flex;
+    align-items: center;
+    &--odd {
+      flex-direction: row-reverse;
+    }
+    &--even {
+      flex-direction: row;
+    }
+  }
+  &__text {
+    padding: 0;
+    &--odd {
+      left: 0;
+      right: 25%;
+    }
+    &--even {
+      right: 0;
+      left: 25%;
+    }
   }
 }
 

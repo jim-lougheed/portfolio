@@ -304,30 +304,44 @@ p {
   padding: 5rem 0 2rem;
   text-align: center;
 }
-.interests__interest {
+
+.carousel-inner {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.interest__image {
   border-radius: 50%;
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   width: 200px;
 }
-@media screen and (min-width: 768px) {
-  .interests__interest--odd {
-    float: left;
-    margin-right: 30px;
-  }
-  .interests__interest--even {
-    float: right;
-    margin-left: 30px;
-  }
-}
-
-.interest-description {
+.interest__description {
   color: #40514e;
 }
 .interest__item {
   color: #40514e;
-  height: 300px;
+  height: 275px;
+  display: flex;
+  align-items: center;
+}
+.interest__item--odd {
+  flex-direction: row-reverse;
+}
+.interest__item--even {
+  flex-direction: row;
+}
+.interest__text {
+  padding: 0;
+}
+.interest__text--odd {
+  left: 0;
+  right: 25%;
+}
+.interest__text--even {
+  right: 0;
+  left: 25%;
 }
 
 .cta__title {
