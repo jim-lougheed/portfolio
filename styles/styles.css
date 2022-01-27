@@ -1,5 +1,4 @@
 body {
-  background-color: #eed3ef;
   color: #40514e;
   font-family: "Georama", sans-serif;
   margin: auto;
@@ -46,7 +45,7 @@ h3 {
 hr {
   border: dotted 5px;
   border-bottom: none;
-  margin: 100px auto;
+  margin: -2.5px auto 0;
   width: 5%;
 }
 
@@ -71,8 +70,8 @@ p {
 .navbar-brand {
   align-self: center;
   color: #fff;
-  font-size: 2rem;
-  margin: 1rem 2rem;
+  font-size: 1.5rem;
+  margin: 0.5rem 2rem;
 }
 .navbar-nav {
   display: flex;
@@ -127,6 +126,28 @@ p {
 }
 .header__container--hero {
   background: url("../images/images/hero.png");
+  background-size: cover;
+  background-position: center;
+}
+@supports (mix-blend-mode: multiply) {
+  .header__container--hero {
+    position: relative;
+    overflow: hidden;
+    background-color: #11999e;
+    background-blend-mode: screen;
+  }
+  .header__container--hero:before, .header__container--hero:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    background: inherit;
+    mix-blend-mode: multiply;
+    transform: scale(1.01);
+  }
 }
 @media screen and (min-width: 768px) {
   .header__container--before {
@@ -175,20 +196,25 @@ p {
 }
 
 .profile {
-  margin: 11vw auto;
+  background-color: #eed3ef;
+  padding: 5rem 0;
+}
+
+.profile__container {
+  margin: 0 auto;
 }
 @media screen and (max-width: 767px) {
-  .profile {
+  .profile__container {
     width: 70%;
   }
 }
 @media screen and (min-width: 768px) {
-  .profile {
+  .profile__container {
     width: 30%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .profile {
+  .profile__container {
     width: 70%;
   }
 }
@@ -209,18 +235,76 @@ p {
   }
 }
 
-.projects__row {
+.projects {
+  margin: 0 auto;
+  width: 50%;
+}
+.projects__container {
+  display: flex;
+  margin: 2rem auto 5rem;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .projects__container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .projects__container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.projects__title {
+  margin: 5rem auto 0;
+  text-align: center;
+}
+
+.empty {
+  height: 225px;
+}
+
+.project__text {
+  padding-top: 50rem;
+}
+.project__image {
+  border-radius: 50%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 200px;
+}
+.project__link {
+  border-radius: 50%;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+}
+.project__header {
+  margin: 1rem;
+}
+
+.interests {
+  background-color: #eed3ef;
+}
+.interests__container {
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  width: 100%;
+}
+.interests__row {
   margin: 100px auto;
   padding-bottom: 1rem;
   text-align: left;
   width: 50%;
 }
-@media screen and (max-width: 767px) {
-  .projects__title {
-    text-align: center;
-  }
+.interests__title {
+  margin: 0 auto;
+  padding: 5rem 0 2rem;
+  text-align: center;
 }
-.projects__project {
+.interests__interest {
   border-radius: 50%;
   height: 200px;
   -o-object-fit: cover;
@@ -228,45 +312,27 @@ p {
   width: 200px;
 }
 @media screen and (min-width: 768px) {
-  .projects__project--odd {
+  .interests__interest--odd {
     float: left;
     margin-right: 30px;
   }
-  .projects__project--even {
+  .interests__interest--even {
     float: right;
     margin-left: 30px;
   }
 }
 
-.skills__row {
-  margin: 100px auto;
-  padding-bottom: 1rem;
-  text-align: left;
-  width: 50%;
+.interest-description {
+  color: #40514e;
 }
-@media screen and (max-width: 767px) {
-  .skills__title {
-    text-align: center;
-  }
-}
-.skills__skill {
-  border-radius: 50%;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 200px;
-}
-@media screen and (min-width: 768px) {
-  .skills__skill--odd {
-    float: left;
-    margin-right: 30px;
-  }
-  .skills__skill--even {
-    float: right;
-    margin-left: 30px;
-  }
+.interest__item {
+  color: #40514e;
+  height: 300px;
 }
 
+.cta__title {
+  margin: 5rem auto 2rem;
+}
 .cta__btn {
   background: #11cdd4;
   background-image: -o-linear-gradient(top, #11cdd4, #11999e);
