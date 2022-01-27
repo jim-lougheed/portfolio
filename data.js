@@ -1,3 +1,30 @@
+const projectsData = [
+  {
+    image: "images/images/kitchen-companion.jpg",
+    alt: "kitchen companion",
+    website: "https://kitchen-companion.herokuapp.com/",
+    title: "KitchenCompanion",
+    description:
+      'KitchenCompanion Customizable Cookbook is a React web application that assists users in finding countless recipe ideas based on ingredients on hand and helps them decide "What am I going to make for dinner tonight?"',
+  },
+  {
+    image: "images/images/simon-game.png",
+    alt: "simon game",
+    website: "https://jim-lougheed.github.io/SimonGame/",
+    title: "Simon Game",
+    description:
+      "A challenge project from Angela Yu's <a href='https://www.udemy.com/course/the-complete-web-development-bootcamp/'>Complete Web Development Bootcamp</a>, this simple JavaScript game is simple to play. With each turn, a square will light up and add to a sequence. It is your job to remember the sequence and click the corresponding squares as it continues to get longer and longer.",
+  },
+  {
+    image: "images/images/dino-game.png",
+    alt: "dino game",
+    website: "https://jim-lougheed.github.io/dino-game/",
+    title: "Dino Game",
+    description:
+      "This clone of the Chrome Dino game is based on a JavaScript tutorial from <a href='https://www.youtube.com/watch?v=47eXVRJKdkU'>Web Dev Simplified</a> but created using React. Press any key to start running and jump over the oncoming cacti!",
+  },
+];
+
 const interestsData = [
   {
     image: "images/images/languages.jpg",

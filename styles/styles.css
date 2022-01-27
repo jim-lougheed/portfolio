@@ -114,16 +114,15 @@ p {
     flex-direction: row;
   }
 }
-.header__container {
-  height: 25vw;
-}
 @media screen and (max-width: 767px) {
   .header__container {
+    height: 300px;
     width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
   .header__container {
+    height: 35vw;
     width: 50%;
   }
 }
@@ -152,6 +151,9 @@ p {
     transform: scale(1.01);
   }
 }
+.header__container__bio {
+  padding-top: 5rem;
+}
 @media screen and (min-width: 768px) {
   .header__container--before {
     display: none;
@@ -164,7 +166,7 @@ p {
 }
 @media screen and (max-width: 767px) {
   .header__header {
-    margin: 0.15vw;
+    margin-top: 4vw;
   }
 }
 @media screen and (min-width: 768px) {
@@ -194,7 +196,12 @@ p {
 }
 @media screen and (max-width: 767px) {
   .header__avatar {
-    width: 20%;
+    width: 10rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__avatar {
+    width: 13vw;
   }
 }
 
@@ -258,7 +265,7 @@ p {
   .projects__container {
     flex-direction: row;
     justify-content: space-evenly;
-    width: 50%;
+    max-width: 1000px;
   }
 }
 .projects__title {
@@ -281,7 +288,12 @@ p {
 }
 @media screen and (min-width: 768px) {
   .project__card {
-    width: 18rem;
+    width: 15rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1080px) {
+  .project__card {
+    width: 20vw;
   }
 }
 .project__text {
@@ -426,6 +438,10 @@ p {
   background-image: -webkit-gradient(to bottom, #30e3cb, #2bc4ad);
   border-radius: 20px;
   text-decoration: none;
+}
+.cta__icon {
+  margin-right: 1rem;
+  width: 3rem;
 }
 
 .footer {
