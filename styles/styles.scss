@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-  color: #66bfbf;
+  color: #44a2a2;
   font-family: "Georama", serif;
   line-height: 1.5;
   margin-top: 50px;
@@ -21,7 +21,7 @@ h1 {
 }
 
 h2 {
-  color: #66bfbf;
+  color: #44a2a2;
   font-family: "Courgette";
   @include sizings.mobile {
     font-size: 2rem;
@@ -50,7 +50,8 @@ a {
 }
 
 a:hover {
-  color: #eaf6f6;
+  color: #44a2a2;
+  font-weight: bold;
 }
 
 p {
@@ -62,13 +63,14 @@ p {
 }
 
 .navbar {
-  background-color: #66bfbf;
+  background-color: #44a2a2;
   display: flex;
   justify-content: space-between;
   font-family: "Courgette";
   &-brand {
     align-self: center;
     font-size: 1.5rem;
+    font-weight: bold;
     margin: 0 auto;
   }
   &-nav {
@@ -119,7 +121,7 @@ p {
       @supports (mix-blend-mode: multiply) {
         position: relative;
         overflow: hidden;
-        background-color: #66bfbf;
+        background-color: #44a2a2;
         background-blend-mode: screen;
 
         &:before,
@@ -164,7 +166,7 @@ p {
     }
   }
   &__subheader {
-    color: #66bfbf;
+    color: #44a2a2;
     font-family: "Courgette";
     @include sizings.mobile {
       font-size: 1rem;
@@ -272,7 +274,6 @@ p {
   &__image {
     border-radius: 50%;
     height: 200px;
-    object-fit: cover;
     width: 200px;
   }
   &__link {
@@ -388,7 +389,7 @@ p {
     -moz-border-radius: 20px;
     border-radius: 20px;
     color: #eaf6f6;
-    font-family: "Josefin Slab";
+    font-family: "Georama";
     font-size: 23px;
     font-weight: bold;
     margin: 50px auto;
@@ -421,7 +422,7 @@ p {
 }
 
 .footer {
-  background-color: #66bfbf;
+  background-color: #44a2a2;
   padding: 20px 0 10px;
   width: auto;
   &__link-container {

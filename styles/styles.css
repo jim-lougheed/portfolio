@@ -6,7 +6,7 @@ body {
 }
 
 h1 {
-  color: #66bfbf;
+  color: #44a2a2;
   font-family: "Georama", serif;
   line-height: 1.5;
   margin-top: 50px;
@@ -23,7 +23,7 @@ h1 {
 }
 
 h2 {
-  color: #66bfbf;
+  color: #44a2a2;
   font-family: "Courgette";
 }
 @media screen and (max-width: 767px) {
@@ -54,7 +54,8 @@ a {
 }
 
 a:hover {
-  color: #eaf6f6;
+  color: #44a2a2;
+  font-weight: bold;
 }
 
 p {
@@ -66,7 +67,7 @@ p {
 }
 
 .navbar {
-  background-color: #66bfbf;
+  background-color: #44a2a2;
   display: flex;
   justify-content: space-between;
   font-family: "Courgette";
@@ -74,6 +75,7 @@ p {
 .navbar-brand {
   align-self: center;
   font-size: 1.5rem;
+  font-weight: bold;
   margin: 0 auto;
 }
 .navbar-nav {
@@ -135,7 +137,7 @@ p {
   .header__container--hero {
     position: relative;
     overflow: hidden;
-    background-color: #66bfbf;
+    background-color: #44a2a2;
     background-blend-mode: screen;
   }
   .header__container--hero:before, .header__container--hero:after {
@@ -176,7 +178,7 @@ p {
   }
 }
 .header__subheader {
-  color: #66bfbf;
+  color: #44a2a2;
   font-family: "Courgette";
   margin: 0;
 }
@@ -420,7 +422,7 @@ p {
   background-image: -webkit-gradient(to bottom, #11cdd4, #11999e);
   border-radius: 20px;
   color: #eaf6f6;
-  font-family: "Josefin Slab";
+  font-family: "Georama";
   font-size: 23px;
   font-weight: bold;
   margin: 50px auto;
@@ -445,7 +447,7 @@ p {
 }
 
 .footer {
-  background-color: #66bfbf;
+  background-color: #44a2a2;
   padding: 20px 0 10px;
   width: auto;
 }
