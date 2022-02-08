@@ -27,18 +27,18 @@ const projectsData = [
 
 const interestsData = [
   {
-    image: "images/images/languages.jpg",
-    altText: "languages",
-    title: "Language",
-    description:
-      "I'm obsessed with the vast number of ways we can use sounds and symbols to convey complex ideas to one another, and often without even thinking about it. Nothing excites me more than examining new words for familiar concepts, new scripts containing familiar thoughts, or new slang to replace standard messages.",
-  },
-  {
     image: "images/images/code.jpeg",
     altText: "web development",
     title: "Web Development",
     description:
       "Last year, a couple good friends introduced me to the world of web development. Although my previous roles were challenging in their own ways, I wanted to take on a new challenge and learn to create applications with my own two hands. Having learned a lot about the way different human languages work, learning computer languages to start coding seemed like a natural next step. With each day, I learn more, build more and grow more curious about the endless possibilities of web development.",
+  },
+  {
+    image: "images/images/languages.jpg",
+    altText: "languages",
+    title: "Language",
+    description:
+      "I'm obsessed with the vast number of ways we can use sounds and symbols to convey complex ideas to one another, and often without even thinking about it. Nothing excites me more than examining new words for familiar concepts, new scripts containing familiar thoughts, or new slang to replace standard messages.",
   },
   {
     image: "images/images/cake.jpg",
