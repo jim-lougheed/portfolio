@@ -1,11 +1,11 @@
 @mixin mobile {
-    @media screen and (max-width: 767px) {
-        @content;
-    }
+  @media screen and (max-width: 767px) {
+    @content;
+  }
 }
 
 @mixin tabdesk {
-    @media screen and (min-width: 768px) {
-        @content;
-    }
+  @media screen and (min-width: 768px) {
+    @content;
+  }
 }

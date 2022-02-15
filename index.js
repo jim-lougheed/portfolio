@@ -1,11 +1,24 @@
 import interestsData from "./data.js";
 
-document.querySelector(".navbar-toggler").addEventListener("click", () => {
-  console.log("test");
-  document.querySelector(".navbar").style.flexDirection = "column";
-  document.getElementById("navbar-nav").style.display = "flex";
+// document.querySelector(".navbar-toggler").addEventListener("click", () => {
+//   console.log("test");
+//   document.querySelector(".navbar").style.flexDirection = "column";
+//   document.getElementById("navbar-nav").style.display = "flex";
+// });
+$(".entry__button").click(() => {
+  $(".entry__page").css("background-color", "transparent");
+  $(".entry__container").css("opacity", "0");
+  setTimeout(() => {
+    $(".entry__shape--1").css("width", "0");
+    $(".entry__shape--2").css("width", "0");
+  }, 1000);
+  setTimeout(() => {
+    $(".entry__page").css("opacity", "0");
+  }, 3000);
+  setTimeout(() => {
+    $(".entry__page").remove();
+  }, 4000);
 });
-
 const carouselInner = document.querySelector(".carousel-inner");
 
 const displayInterestsData = (data) => {

@@ -58,6 +58,132 @@ p {
   line-height: 2;
 }
 
+// Entry screen and animation
+.entry {
+  &__page {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    transition: background-color 1s, opacity 1s;
+  }
+  &__shape {
+    height: 100%;
+    position: relative;
+    width: calc(50% - 57px);
+    transition: width 2s;
+    &--1:after,
+    &--2:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 0;
+      height: 0;
+    }
+    &--1 {
+      float: left;
+      background-image: linear-gradient(45deg, #eed3ef, #eed3ef);
+      &:after {
+        left: 100%;
+        border-top: 100vh solid #eed3ef;
+        border-right: 100px solid transparent;
+      }
+    }
+    &--2 {
+      float: right;
+      background: #44a2a2;
+      &:before {
+        right: 100%;
+        border-bottom: 100vh solid #44a2a2;
+        border-left: 100px solid transparent;
+      }
+    }
+  }
+  &__container {
+    position: absolute;
+    transition: opacity 1s;
+    width: 100%;
+  }
+  &__bio {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    @include sizings.mobile {
+      flex-direction: column;
+      margin-top: 15vh;
+    }
+    @include sizings.tabdesk {
+      margin-top: 25vh;
+    }
+  }
+  &__bio-section {
+    min-width: 40vw;
+    &--1 {
+      @include sizings.mobile {
+        margin-right: 60%;
+        margin-bottom: -2%;
+      }
+    }
+    &--2 {
+      @include sizings.mobile {
+        margin-left: 60%;
+        margin-top: -2%;
+      }
+    }
+  }
+  &__header {
+    margin: 0 auto;
+    width: 85%;
+    @include sizings.mobile {
+      font-size: 2rem;
+    }
+    @include sizings.tabdesk {
+      font-size: 4.5rem;
+    }
+    &--bio-1 {
+      color: #44a2a2;
+    }
+    &--bio-2 {
+      color: #eed3ef;
+    }
+  }
+  &__subheader {
+    margin: 0 auto;
+    width: 90%;
+    @include sizings.mobile {
+      font-size: 1rem;
+    }
+    @include sizings.tabdesk {
+      font-size: 2rem;
+    }
+    &--bio-1 {
+      color: #44a2a2;
+    }
+    &--bio-2 {
+      color: #eed3ef;
+    }
+  }
+  &__avatar {
+    border: 4px solid black;
+    border-radius: 50%;
+    max-width: 150px;
+    @include sizings.mobile {
+      width: 40vw;
+    }
+  }
+
+  &__button {
+    // background-image: linear-gradient(85deg, #44a2a2, #eed3ef);
+    border: 2px solid black;
+    border-radius: 50px;
+    font-family: "Courgette";
+    font-size: 2rem;
+    margin: 2rem;
+    width: 10rem;
+  }
+}
+
 .navbar-light .navbar-brand {
   color: #fff;
 }
@@ -89,13 +215,7 @@ p {
   }
 }
 
-.nav-item {
-  list-style: none;
-}
-.nav-link {
-  color: #fff;
-}
-
+// Header
 .header {
   display: flex;
   @include sizings.mobile {
@@ -106,11 +226,10 @@ p {
   }
   &__container {
     @include sizings.mobile {
-      height: 300px;
+      // height: 300px;
       width: 100%;
     }
     @include sizings.tabdesk {
-      height: 35vw;
       width: 50%;
     }
     &--hero {
@@ -137,13 +256,7 @@ p {
           mix-blend-mode: multiply;
           transform: scale(1.01);
         }
-
-        // border: 5px;
-        // border-style: solid;
       }
-    }
-    &__bio {
-      padding-top: 5rem;
     }
     &--before {
       @include sizings.tabdesk {
@@ -155,26 +268,29 @@ p {
         display: none;
       }
     }
-  }
-  &__header {
-    @include sizings.mobile {
-      margin-top: 4vw;
+    &--bio {
+      align-items: center;
+      background-color: #eed3ef;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem;
     }
-    @include sizings.tabdesk {
-      margin-top: 4vw;
-      margin-bottom: 0;
-    }
   }
-  &__subheader {
-    color: #44a2a2;
-    font-family: "Courgette";
+  &__socials {
+    margin: 1rem;
+  }
+  &__description {
+    color: black;
+    font-family: "Georama";
+    margin: 0 auto;
+    width: 50%;
     @include sizings.mobile {
       font-size: 1rem;
     }
     @include sizings.tabdesk {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
-    margin: 0;
   }
   &__avatar {
     border-radius: 50%;
@@ -188,38 +304,24 @@ p {
   }
 }
 
-.profile {
-  background-color: #eed3ef;
-  padding: 5rem 0;
-}
-.profile {
-  &__container {
-    margin: 0 auto;
-    @include sizings.mobile {
-      width: 70%;
-    }
-    @include sizings.tabdesk {
-      width: 30%;
-    }
-    @media screen and (min-width: 768px) and (max-width: 1279px) {
-      width: 70%;
-    }
-  }
-
-  &__link-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+// Nav
+.sections-nav {
+  background: #44a2a2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &__link {
+    color: #eed3ef;
     font-size: 1.5rem;
+    padding: 1rem;
+    &:hover {
+      color: #eed3ef;
+    }
   }
   &__link-break {
     margin: 0 2rem;
-  }
-  &__description {
-    @include sizings.tabdesk {
-      font-size: 1.5rem;
+    @include sizings.mobile {
+      margin: 0 1rem;
     }
   }
 }
@@ -314,14 +416,13 @@ p {
     width: 80%;
   }
   @include sizings.tabdesk {
-    width: 50%;
+    max-width: 1000px;
+    width: 60%;
   }
 }
 
 .carousel-caption {
-  @include sizings.mobile {
-    position: static;
-  }
+  position: static;
 }
 
 .carousel-indicators {
@@ -331,23 +432,26 @@ p {
 .interest {
   &__image {
     border-radius: 50%;
-    height: 200px;
+    max-height: 200px;
     object-fit: cover;
-    width: 200px;
+    max-width: 200px;
+    width: 15vw;
+    height: 15vw;
+    margin: 1rem;
   }
   &__description {
     color: #40514e;
+    max-width: 900px;
   }
   &__item {
+    align-items: center;
     color: #40514e;
     display: flex;
     @include sizings.mobile {
-      align-items: center;
       flex-direction: column;
     }
     @include sizings.tabdesk {
-      align-items: flex-end;
-      height: 250px;
+      min-height: 250px;
       &--even {
         flex-direction: row-reverse;
       }
@@ -368,13 +472,15 @@ p {
       }
       &--odd {
         right: 0;
-        left: 25%;
+        // left: 25%;
       }
     }
   }
 }
 
 .cta {
+  margin: 0 auto;
+  width: 90%;
   &__title {
     margin: 5rem auto 2rem;
   }
@@ -439,23 +545,5 @@ p {
   &__copyright {
     color: #eaf6f6;
     font-size: 0.75em;
-  }
-}
-
-.come-in {
-  transform: translateY(150px);
-  animation: come-in 0.8s ease forwards;
-}
-.come-in:nth-child(odd) {
-  animation-duration: 0.6s;
-}
-.already-visible {
-  transform: translateY(0);
-  animation: none;
-}
-
-@keyframes come-in {
-  to {
-    transform: translateY(0);
   }
 }
