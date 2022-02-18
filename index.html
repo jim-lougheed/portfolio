@@ -4,14 +4,8 @@
     <meta charset="utf-8" />
     <title>Jim Lougheed</title>
     <meta name="mySite" content="myInfo" />
-    <meta name="author" content="Jim" />
-    <meta name="keywords" content="so professional" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+    <meta name="author" content="Jim Lougheed" />
+    <meta name="keywords" content="portfolio jim lougheed" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link
       rel="apple-touch-icon"
@@ -36,19 +30,15 @@
       href="images/images/safari-pinned-tab.svg"
       color="#5bbad5"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Courgette&family=Georama:wght@200&family=Josefin+Slab:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Georama:wght@300;500&family=Josefin+Slab:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-      defer
-    ></script>
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -72,7 +62,7 @@
     </script>
   </head>
   <body>
-    <div class="entry__page">
+    <!-- <div class="entry__page">
       <div class="entry__shape entry__shape--1"></div>
       <div class="entry__shape entry__shape--2"></div>
       <div class="entry__container">
@@ -97,9 +87,9 @@
         </section>
         <button class="entry__button">Enter</button>
       </div>
-    </div>
-    <nav class="navbar navbar-light module">
-      <a class="navbar-brand" href="#">jim lougheed</a>
+    </div> -->
+    <nav class="navbar">
+      <p class="navbar-brand">Jim Lougheed - a web developer/linguist</p>
     </nav>
     <header class="header module">
       <div
@@ -113,32 +103,32 @@
         />
         <div class="header__socials">
           <a
-            class="footer__link"
+            class="header__social-link"
             href="https://www.linkedin.com/in/jim-lougheed/"
             ><img
-              src="images/icons/linkedin-brands.svg"
+              src="images/icons/linkedin-brands-green.svg"
               alt="linkedin icon"
-              class="footer__icon"
+              class="header__social-icon"
           /></a>
-          <a class="footer__link" href="https://github.com/jim-lougheed"
+          <a class="header__social-link" href="https://github.com/jim-lougheed"
             ><img
-              src="images/icons/github-square-brands.svg"
+              src="images/icons/github-square-brands-green.svg"
               alt="github icon"
-              class="footer__icon"
+              class="header__social-icon"
           /></a>
-          <a class="footer__link" href="https://twitter.com/JimsCodes"
+          <a class="header__social-link" href="https://twitter.com/JimsCodes"
             ><img
-              src="images/icons/twitter-square-brands.svg"
+              src="images/icons/twitter-square-brands-green.svg"
               alt="twitter icon"
-              class="footer__icon"
+              class="header__social-icon"
           /></a>
           <a
-            class="footer__link"
+            class="header__social-link"
             href="https://www.instagram.com/fader08/?hl=en"
             ><img
-              src="images/icons/instagram-square-brands.svg"
+              src="images/icons/instagram-square-brands-green.svg"
               alt="instagram icon"
-              class="footer__icon"
+              class="header__social-icon"
           /></a>
         </div>
         <p class="header__description">
@@ -152,74 +142,269 @@
       ></div>
     </header>
     <div class="sections-nav">
-      <a href="#myProjects" class="sections-nav__link">Projects</a>
+      <p class="sections-nav__link" data-section="0">Projects</p>
       <p class="sections-nav__link-break">|</p>
-      <a href="#myInterests" class="sections-nav__link">Interests</a>
+      <p class="sections-nav__link" data-section="1">Interests</p>
       <p class="sections-nav__link-break">|</p>
-      <a href="#cta" class="sections-nav__link">Contact</a>
+      <p class="sections-nav__link" data-section="2">Contact</p>
     </div>
-    <div class="projects module" id="myProjects">
-      <h2 class="projects__title">My Projects</h2>
-      <div class="projects__container">
-        <div class="card project__card">
-          <div class="card-body">
+    <section class="sections-container">
+      <div class="projects section section--0 section--active">
+        <h2 class="projects__title">My Projects</h2>
+        <div class="projects__container">
+          <div class="card project__card">
             <img
-              class="project__image"
+              class="project__image project__image--left"
               src="images/images/kitchen-companion.jpg"
               alt="kitchen companion"
             />
-            <a href="https://kitchen-companion.herokuapp.com/">
-              <h3 class="project__header">Kitchen Companion</h3>
-            </a>
-            <p class="project__description">
-              KitchenCompanion Customizable Cookbook is a React web application
-              that assists users in finding countless recipe ideas based on
-              ingredients on hand and helps them decide "What am I going to make
-              for dinner tonight?"
-            </p>
+            <div class="project__body project__body--left">
+              <div class="project__title-link-container">
+                <a href="https://kitchen-companion.herokuapp.com/">
+                  <h3 class="project__title">Kitchen Companion</h3>
+                </a>
+                <a
+                  class="project__github-link"
+                  href="https://github.com/jim-lougheed/kitchen-companion"
+                  ><img
+                    src="images/icons/github-square-brands.svg"
+                    alt="github icon"
+                    class="project__github-icon"
+                /></a>
+              </div>
+              <p class="project__description">
+                As someone who dreads having to think of meal ideas, I created
+                KitchenCompanion Customizable Cookbook to aid users in finding
+                countless recipe ideas based on ingredients on-hand and helps
+                them decide "What am I going to make for dinner tonight?"
+              </p>
+              <div class="project__specs">
+                <h3 class="project__spec project__spec--active" data-spec="0">
+                  Tech Specs
+                </h3>
+                <h3 class="project__spec" data-spec="1">Challenges</h3>
+                <h3 class="project__spec" data-spec="2">Successes</h3>
+              </div>
+              <div class="project__details">
+                <div
+                  class="project__detail project__detail--active"
+                  data-detail="0"
+                >
+                  <p>
+                    <span class='text-bold'>Front end:</span> React, JavaScript, Ant Design, SASS, Axios,
+                    Winwheel.js
+                  </p>
+                  <p>
+                    <span class='text-bold'>Back end:</span> Node.js, Express, MySQL, Spoonacular API, Knex,
+                    CORS, Axios, React Router
+                  </p>
+                  <p>
+                    KitchenCompanion uses the Spoonacular API to retrieve and
+                    display thousands of different recipes and allows users to
+                    sort/filter them according to different search criteria.
+                    This includes being able to filter recipes based on
+                    ingredients that the user has on hand, which is saved in the
+                    application's state, as well as a random selector wheel that
+                    chooses a recipe randomly for easy meal decisions.
+                  </p>
+                  <p>
+                    The application also uses a number of Ant Design components
+                    for a smooth user experience.
+                  </p>
+                </div>
+                <div class="project__detail" data-detail="1">
+                  <p>
+                    I initially explored several different recipe APIs to find
+                    the functionality I wanted. After selecting one, I ended up
+                    having to make a change halfway through the project due to a
+                    lack of one category of information I needed.
+                  </p>
+                  <p>
+                    The Dinner Wheel was easy to build with Winwheel.js, but
+                    manipulating the funcionality proved to be difficult. I was
+                    able to modify the dependency package to get the results I
+                    wanted after many hours of scouring Stack Overflow.
+                  </p>
+                </div>
+                <div class="project__detail" data-detail="2">
+                  <p>
+                    With only two weeks to get a working product, I was amazed
+                    at what I could build in such a short amount of time.
+                    Despite all the moving parts and discovering what I could
+                    and could not complete in the given timeframe, I am so proud
+                    to have integrated all the moving parts well and deliver an
+                    application so full of good functionality.
+                  </p>
+                  <p>
+                    Despite my ability to customize the functionality of
+                    Winwheel.js, I also had trouble maintaining it after
+                    deploying the application. However, this opened me to the
+                    experience of modifying the dependency, saving it to my
+                    GitHub and using my own dependency in the project -
+                    something I would not have had to experiment with otherwise.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="card project__card">
-          <div class="card-body">
+          <div class="card project__card">
             <img
-              class="project__image"
+              class="project__image project__image--right"
               src="images/images/encounterDex.png"
               alt="encounter dex"
             />
-            <a href="https://encounterdex.herokuapp.com/">
-              <h3 class="project__header">encounterDex</h3>
-            </a>
-            <p class="project__description">
-              Trying to catch 'em all? encounterDex uses the PokéAPI to retrieve
-              a list of Pokémon that players can encounter in all areas of the
-              games. You can search by different encounter methods and see
-              available Pokémon's levels and encounter conditions.
-            </p>
+            <div class="project__body project__body--right">
+              <div class="project__title-link-container">
+                <a href="https://encounterdex.herokuapp.com/">
+                  <h3 class="project__title">encounterDex</h3>
+                </a>
+                <a
+                  class="project__github-link"
+                  href="https://github.com/jim-lougheed/encounterDexBDSP"
+                  ><img
+                    src="images/icons/github-square-brands.svg"
+                    alt="github icon"
+                    class="project__github-icon"
+                /></a>
+              </div>
+              <p class="project__description">
+                Trying to catch 'em all? encounterDex uses the PokéAPI to
+                retrieve a list of Pokémon that players can encounter in all
+                areas of the games. You can search by different encounter
+                methods and see available Pokémon's levels and encounter
+                conditions.
+              </p>
+              <div class="project__specs">
+                <h3 class="project__spec project__spec--active" data-spec="0">
+                  Tech Specs
+                </h3>
+                <h3 class="project__spec" data-spec="1">Challenges</h3>
+                <h3 class="project__spec" data-spec="2">Successes</h3>
+              </div>
+              <div class="project__details">
+                <div
+                  class="project__detail project__detail--active"
+                  data-detail="0"
+                >
+                  <p><span class='text-bold'>Front end:</span> React, JavaScript, Material UI, SASS, Axios</p>
+                  <p>
+                    <span class='text-bold'>Back end:</span> Node.js, Express, PokéAPI, CORS, Axios, React
+                    Router
+                  </p>
+                  <p>
+                    This React application makes calls to the PokéAPI on the
+                    Node back end, while the front end filters data to sort
+                    encounter methods, conditions and Pokemon levels.
+                  </p>
+                </div>
+                <div class="project__detail" data-detail="1">
+                  <p>
+                    As I moved the information retrieved from the API down
+                    through the components, it became increasingly challenging
+                    to filter out irrelevant information.
+                  </p>
+                  <p>
+                    Using CSS Grid also proved to be difficult in terms of
+                    responsiveness. However, I was able to learn much more about
+                    how Grid really works.
+                  </p>
+                </div>
+                <div class="project__detail" data-detail="2">
+                  <p>
+                    This project really helped me cement my understanding of
+                    JavaScript higher-order functions, as I often needed to use
+                    .map(), .filter(), and .any() in order to separate and
+                    compile retrieved information to display in the appropriate
+                    component.
+                  </p>
+                  <p>
+                    I was able to set the application up to easily add game and
+                    route information for any of the other games in the main
+                    series by adding an array of route information. As I am
+                    able, I will be adding this information in without adjusting
+                    the app's functionality.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="card project__card">
-          <div class="card-body">
+          <div class="card project__card">
             <img
-              class="project__image"
-              src="images/images/simon-game.png"
-              alt="simon game"
-            />
-            <a href="https://jim-lougheed.github.io/SimonGame/">
-              <h3 class="project__header">The Simon Game</h3>
-            </a>
-            <p class="projects__description">
-              A challenge project from Angela Yu's
-              <a
-                href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
-                >Complete Web Development Bootcamp</a
-              >, this simple JavaScript game is simple to play. With each turn,
-              a square will light up and add to a sequence. It's your job to
-              remember the sequence and click the corresponding squares as it
-              continues to get longer and longer.
-            </p>
+                class="project__image project__image--left"
+                src="images/images/simon-game.png"
+                alt="simon game"
+              />
+            <div class="project__body project__body--left">
+              <div class="project__title-link-container">
+                <a href="https://jim-lougheed.github.io/SimonGame/">
+                  <h3 class="project__title">The Simon Game</h3>
+                </a>
+                <a
+                  class="project__github-link"
+                  href="https://github.com/jim-lougheed/SimonGame"
+                  ><img
+                    src="images/icons/github-square-brands.svg"
+                    alt="github icon"
+                    class="project__github-icon"
+                /></a>
+              </div>
+              <p class="project__description">
+                A challenge project from Angela Yu's
+                <a
+                  href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
+                  >Complete Web Development Bootcamp</a
+                >, this simple JavaScript game is simple to play. With each
+                turn, a square will light up and add to a sequence. It's your
+                job to remember the sequence and click the corresponding squares
+                in the correct order as it continues to get longer and longer.
+              </p>
+              <div class="project__specs">
+                <h3 class="project__spec project__spec--active" data-spec="0">
+                  Tech Specs
+                </h3>
+                <h3 class="project__spec" data-spec="1">Challenges</h3>
+                <h3 class="project__spec" data-spec="2">Successes</h3>
+              </div>
+              <div class="project__details">
+                <div
+                  class="project__detail project__detail--active"
+                  data-detail="0"
+                >
+                  <p><span class='text-bold'>Stack:</span> JavaScript, HTML, CSS</p>
+                  <p>
+                    This Single-Page Application uses a simple JavaScript file
+                    that stores colour strings in two arrays - one "chosen" by
+                    the game, the other clicked by the player - and compares
+                    them before proceeding or restarting the game.
+                  </p>
+                </div>
+                <div class="project__detail" data-detail="1">
+                  <p>
+                    As my first JavaScript project, this game really challenged
+                    my understanding of using functions to follow logic.
+                    Understanding how to break down each step into smaller steps
+                    was key!
+                  </p>
+                  <p>
+                    Furthermore, the Simon game tested my ability to iterate
+                    through and add to arrays, and then to validate their
+                    values.
+                  </p>
+                </div>
+                <div class="project__detail" data-detail="2">
+                  <p>
+                    Completing this challenge solidified my grasp of project
+                    flow and the importance of breaking down tasks.
+                  </p>
+                  <p>
+                    It also showed me the advantage of clean, reusable code to
+                    make it easier to understand and use.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <!-- <div class="card project__card">
+          <!-- <div class="card project__card">
       <div class="card-body">
         <img class="project__image" src="images/images/dino-game.png" alt="dino game">
         <a href="https://jim-lougheed.github.io/dino-game/">
@@ -229,133 +414,219 @@
           
       </div>
     </div> -->
-      </div>
-    </div>
-    <hr />
-    <div class="interests module" id="myInterests">
-      <h2 class="interests__title">My Interests</h2>
-      <div class="interests__container">
-        <div
-          id="carouselExampleCaptions"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="3"
-              aria-label="Slide 4"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="4"
-              aria-label="Slide 5"
-            ></button>
-          </div>
-          <div class="carousel-inner"></div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
-    </div>
 
-    <hr />
-
-    <div class="cta module" id="cta">
-      <h2 class="cta__title">Let's Chat</h2>
-      <h3>
-        Whether is be about technology, linguistics, science, books, or whatever
-        else, I'm always down for an exchange of ideas
-      </h3>
-      <p>
-        It's curiosity that killed the cat. But it is also what motivated the
-        Jim. Let's be curious together!
-      </p>
-      <a class="cta__btn" href="mailto:jglougheed@gmail.com"
-        ><img
-          class="cta__icon"
-          src="images/icons/envelope-regular.svg"
-          alt="email icon"
-          class="footer__icon"
-        />
-        CONTACT ME</a
-      >
-    </div>
-
-    <div class="footer module">
-      <div class="footer__link-container">
-        <a class="footer__link" href="mailto:jglougheed@gmail.com"></a>
-        <a class="footer__link" href="https://www.linkedin.com/in/jim-lougheed/"
-          ><img
-            src="images/icons/linkedin-brands.svg"
-            alt="linkedin icon"
-            class="footer__icon"
-        /></a>
-        <a class="footer__link" href="https://github.com/jim-lougheed"
-          ><img
-            src="images/icons/github-square-brands.svg"
-            alt="github icon"
-            class="footer__icon"
-        /></a>
-        <a class="footer__link" href="https://twitter.com/JimsCodes"
-          ><img
-            src="images/icons/twitter-square-brands.svg"
-            alt="twitter icon"
-            class="footer__icon"
-        /></a>
-        <a class="footer__link" href="https://www.instagram.com/fader08/?hl=en"
-          ><img
-            src="images/icons/instagram-square-brands.svg"
-            alt="instagram icon"
-            class="footer__icon"
-        /></a>
+      <div class="interests section section--1">
+        <h2 class="interests__title">My Interests</h2>
+        <div class="interests__container">
+          <div class="card interest__card">
+            <img
+              class="interest__image interest__image--left"
+              src="images/images/code.jpeg"
+              alt="web development"
+            />
+            <div class="interest__body interest__body--left">
+                  <h3 class="interest__title">Web Development</h3>
+              <p class="interest__description">
+                Last year, a couple good friends introduced me to the world of
+                web development. Although my previous roles were challenging in
+                their own ways, I was eager to take on a new challenge and learn
+                to create applications with my own two hands. Having learned a
+                lot about the way different human languages work, learning
+                computer languages to start coding seemed like a natural next
+                step. With each day, I learn more, build more and grow more
+                curious about the endless possibilities of software development.
+              </p>
+              <div class="interest__specs">
+                <h3 class="interest__spec">
+                  More <span class="interest__spec-arrow">↓</span>
+                </h3>
+                <div class="interest__detail">
+                  <p><span class='text-bold'>Tech Stack:</span></p>
+                  
+                    <span class='text-bold'>Languages:</span> HTML, CSS (SASS), JavaScript (Node.js, EJS), php,
+                    Dart</br>
+                    <span class='text-bold'>Libraries:</span> React, jQuery, Axios, Flutter</br>
+                    <span class='text-bold'>Frameworks:</span> Express.js, Bootstrap, Ant Design</br>
+                      <span class='text-bold'>Databases:</span> MySQL (Knex), MongoDB (Mongoose)</br>
+                        <span class='text-bold'>APIs:</span> DOM APIs, Web APIs (Spoonacular, PokéAPI)</br>
+                          <span class='text-bold'>Version control:</span> Git, GitHub</br>
+                            <span class='text-bold'>Methodologies:</span> Agile (JIRA, Kanban), BEM</br>
+                              <span class='text-bold'>Deployment: Heroku, Netlify</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card interest__card">
+            <img
+              class="interest__image interest__image--right"
+              src="images/images/languages.jpg"
+              alt="languages"
+            />
+            <div class="interest__body interest__body--right">
+                  <h3 class="interest__title">Language</h3>
+              <p class="interest__description">
+                I'm obsessed with the countless ways we can use sounds and
+                symbols to convey complex ideas to one another (often
+                without even thinking about it). Nothing excites me more than
+                examining new words for familiar concepts, new scripts
+                for familiar messages, or new idoms that paint new pictures for familiar
+                thoughts.
+              </p>
+              <div class="interest__specs">
+                <h3 class="interest__spec">
+                  More <span class="interest__spec-arrow">↓</span>
+                </h3>
+                <div class="interest__detail">
+                <p><span class='text-bold'>Languages:</span></p>
+                  <br>
+                    <span class='text-bold'>Native:</span> English</br>
+                    <span class='text-bold'>Advanced:</span> French</br>
+                      <span class='text-bold'>Intermediate:</span> Mandarin</br>
+                        <span class='text-bold'>Beginner/Casual:</span> Arabic, Cantonese, German, Malay, Spanish, Swedish</br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card interest__card">
+            <img
+                class="interest__image interest__image--left"
+                src="images/images/cake.jpg"
+                alt="baking"
+              />
+            <div class="interest__body interest__body--left">
+              
+                  <h3 class="interest__title">Baking</h3>
+              <p class="interest__description">
+                It's no secret I have a killer sweettooth, nor is it that it is spoiled
+                with desserts and goodies. Due in part to the Great Canadian
+                Baking Show, I have sank my teeth into the world of creating
+                elegant and sugary desserts (and then enjoy sinking my teeth
+                into the desserts themselves!). I've come a long way, but I have
+                a lot to learn and bake before I earn the title of Star Baker.
+              </p>
+              <div class="interest__specs">
+                <h3 class="interest__spec">
+                  More <span class="interest__spec-arrow">↓</span>
+                </h3>
+                <div class="interest__detail">
+                  <p><span class='text-bold'>My specialties:</span> macarons (they're easier than they look!), croissants, cakes & cookies.</p>
+                  <p>Check out <a href='https://www.instagram.com/fader08/?hl=en'>my Instagram</a> for more!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card interest__card">
+            <img
+                class="interest__image interest__image--right"
+                src="images/images/piano.jpg"
+                alt="piano"
+              />
+            <div class="interest__body interest__body--right">
+                  <h3 class="interest__title">Piano</h3>
+              <p class="interest__description">
+                Sitting down at the bench and turning scribblings into
+                melodies never fails to transport me to another world. Since I was a wee lad,
+                I have been in love with creating music and putting my emotions into the ether. It's a beautiful thing.
+              </p>
+              <div class="interest__specs">
+                <h3 class="interest__spec">
+                  More <span class="interest__spec-arrow">↓</span>
+                </h3>
+                <div class="interest__detail">
+                  <p>I have my Grade 8 Piano from the Royal Conservatory of Music, and I perform semi-annually with Lupton Street Studios in fundraisers.</p>
+                  <p>I also play the trumpet!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card interest__card">
+            <img
+                class="interest__image interest__image--left"
+                src="images/images/video-games.jpg"
+                alt="video games"
+              />
+            <div class="interest__body interest__body--left">
+                  <h3 class="interest__title">Video Games</h3>
+              <p class="interest__description">
+                From the moment I received my first console (Nintendo 64) one Christmas, I've had
+                a passion for gaming. A good game brings you into its
+                constructed world and lets you explore and solve challenges
+                within its constructs, and it's exactly this feeling of
+                immersion that I keep coming back for.
+              </p>
+              <div class="interest__specs">
+                <h3 class="interest__spec">
+                  More <span class="interest__spec-arrow">↓</span>
+                </h3>
+                <div class="interest__detail">
+                  <p>Video games also integrate with a number of other interests of mine: listening to beautiful soundtracks, finding and exploiting program bugs, examining game translations and localizations.</p>
+                  <p>My favourite games include The Legend of Zelda (my fav being Majora's Mask), the Pokémon series, the Super Mario series (especially Mario Karts and Mario Partys), Banjo-Kazooie/Tooie, Octopath Traveler, Perfect Dark, and the list goes on...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="cta section section--2" id="cta">
+        <h2 class="cta__title">Let's Chat</h2>
+        <div class="cta__container">
+          <h3 class="cta__blurb1">
+            Whether it be about technology, linguistics, science, books, or
+            whatever else, I'm always down for an exchange of ideas
+          </h3>
+<div class="cta__background-details-container">
+  <div class="cta__background"></div>
+          <div class="cta__details-container">
+            <a href='https://www.linkedin.com/in/jim-lougheed/'><img
+              src="images/icons/square-linkedin.svg"
+              alt="LinkedIn icon"
+              class="cta__icon"
+            />
+          </a>
+            <p class="cta__detail">jim-lougheed</p>
+            <a href='https://github.com/jim-lougheed'><img
+              src="images/icons/square-github.svg"
+              alt=""
+              class="cta__icon"
+            />
+          </a>
+            <p class="cta__detail">jim-lougheed</p>
+            <a href='https://twitter.com/JimsCodes'><img
+              src="images/icons/square-twitter.svg"
+              alt=""
+              class="cta__icon"
+            /></a>
+            <p class="cta__detail">@JimsCodes</p>
+            <a href='https://www.instagram.com/fader08/?hl=en'><img
+              src="images/icons/square-insta.svg"
+              alt=""
+              class="cta__icon"
+            />
+          </a>
+            <p class="cta__detail">@fader08</p>
+            <a href='mailto:jglougheed@gmail.com'><img
+              src="images/icons/square-mail.svg"
+              alt=""
+              class="cta__icon"
+            />
+          </a>
+            <p class="cta__detail">jglougheed@gmail.com</p>
+          </div>
+        </div>
+          <p class="cta__blurb2">
+            It's curiosity that killed the cat. But it is also what motivated
+            the Jim. Let's be curious together!
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="footer">
       <p class="footer__copyright">© 2022 Jim Lougheed.</p>
     </div>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-      defer
-    ></script>
   </body>
 </html>
