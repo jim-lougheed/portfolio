@@ -186,6 +186,7 @@ p {
   font-family: "Courgette";
   font-size: 2rem;
   margin: 2rem;
+  cursor: pointer;
   width: 10rem;
 }
 
@@ -631,8 +632,12 @@ p {
   width: 100%;
 }
 .cta__title {
-  margin: 5rem auto 0;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .cta__title {
+    margin: 2rem auto 0;
+  }
 }
 .cta__container {
   background: var(--lightpurple);

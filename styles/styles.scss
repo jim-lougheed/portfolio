@@ -171,6 +171,7 @@ p {
     font-family: "Courgette";
     font-size: 2rem;
     margin: 2rem;
+    cursor: pointer;
     width: 10rem;
   }
 }
@@ -555,8 +556,10 @@ p {
   margin: 0 auto;
   width: 100%;
   &__title {
-    margin: 5rem auto 0;
     text-align: center;
+    @include sizings.tabdesk {
+      margin: 2rem auto 0;
+    }
   }
   &__container {
     background: var(--lightpurple);
