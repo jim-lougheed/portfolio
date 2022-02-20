@@ -49,6 +49,117 @@ p {
   font-weight: bold;
 }
 
+// Animated shapes
+.background-octo {
+  width: clamp(100px, 30vw, 300px);
+  height: clamp(100px, 30vw, 300px);
+
+  position: absolute;
+  top: 550px;
+  left: -300px;
+
+  animation: 75s linear 0s infinite running travel-octo;
+  z-index: -1;
+}
+
+.background-star {
+  width: clamp(100px, 30vw, 300px);
+  height: clamp(100px, 30vw, 300px);
+
+  position: absolute;
+  top: 1550px;
+  left: -300px;
+
+  animation: 70s linear 15s infinite running travel-star;
+  z-index: -1;
+}
+
+.background-circle {
+  width: clamp(100px, 30vw, 300px);
+  height: clamp(100px, 30vw, 300px);
+
+  position: absolute;
+  top: 0px;
+  left: -300px;
+
+  animation: 60s linear 45s infinite running travel-circle;
+  z-index: -1;
+}
+.background-triangle {
+  width: clamp(100px, 30vw, 300px);
+  height: clamp(100px, 30vw, 300px);
+
+  position: absolute;
+  top: 1100px;
+  left: -300px;
+
+  animation: 45s linear 30s infinite running travel-triangle;
+  z-index: -1;
+}
+.background-square {
+  width: clamp(100px, 30vw, 300px);
+  height: clamp(100px, 30vw, 300px);
+
+  position: absolute;
+  top: 0px;
+  left: -300px;
+
+  animation: 100s linear 60s infinite running travel-square;
+  z-index: -1;
+}
+
+@keyframes travel-octo {
+  from {
+    left: -300px;
+    top: 550px;
+  }
+  to {
+    left: 100%;
+    top: 0px;
+  }
+}
+@keyframes travel-star {
+  from {
+    left: -300px;
+    top: 1550px;
+  }
+  to {
+    left: 100%;
+    top: 1200px;
+  }
+}
+@keyframes travel-circle {
+  from {
+    left: -300px;
+    top: 0px;
+  }
+  to {
+    left: 100%;
+    top: 1350px;
+  }
+}
+@keyframes travel-triangle {
+  from {
+    left: -300px;
+    top: 1100px;
+  }
+  to {
+    left: 100%;
+    top: 2200px;
+  }
+}
+
+@keyframes travel-square {
+  from {
+    left: -300px;
+    top: 0px;
+  }
+  to {
+    left: 100%;
+    top: 2100px;
+  }
+}
+
 // Entry screen and animation
 .entry {
   &__page {
@@ -312,17 +423,28 @@ p {
   }
 }
 
+.sections-container {
+  position: relative;
+  overflow: hidden;
+}
+
 // Info section
 .section {
   position: absolute;
   transition: left 2s, opacity 5s;
   opacity: 0;
-  overflow-y: hidden;
-  max-height: 1000px;
+  // overflow-y: hidden;
+  // max-height: 100px;
   &--active {
     opacity: 100;
-    overflow-y: visible;
+    // overflow-y: visible;
   }
+}
+
+.animation-container {
+  position: relative;
+  // height: 2500px;
+  overflow: hidden;
 }
 
 // Projects section

@@ -55,6 +55,162 @@ p {
   font-weight: bold;
 }
 
+.background-octo {
+  width: clamp(100px, 30vw, 300px);
+  height: clamp(100px, 30vw, 300px);
+  position: absolute;
+  top: 550px;
+  left: -300px;
+  -webkit-animation: 75s linear 0s infinite running travel-octo;
+          animation: 75s linear 0s infinite running travel-octo;
+  z-index: -1;
+}
+
+.background-star {
+  width: clamp(100px, 30vw, 300px);
+  height: clamp(100px, 30vw, 300px);
+  position: absolute;
+  top: 1550px;
+  left: -300px;
+  -webkit-animation: 70s linear 15s infinite running travel-star;
+          animation: 70s linear 15s infinite running travel-star;
+  z-index: -1;
+}
+
+.background-circle {
+  width: clamp(100px, 30vw, 300px);
+  height: clamp(100px, 30vw, 300px);
+  position: absolute;
+  top: 0px;
+  left: -300px;
+  -webkit-animation: 60s linear 45s infinite running travel-circle;
+          animation: 60s linear 45s infinite running travel-circle;
+  z-index: -1;
+}
+
+.background-triangle {
+  width: clamp(100px, 30vw, 300px);
+  height: clamp(100px, 30vw, 300px);
+  position: absolute;
+  top: 1100px;
+  left: -300px;
+  -webkit-animation: 45s linear 30s infinite running travel-triangle;
+          animation: 45s linear 30s infinite running travel-triangle;
+  z-index: -1;
+}
+
+.background-square {
+  width: clamp(100px, 30vw, 300px);
+  height: clamp(100px, 30vw, 300px);
+  position: absolute;
+  top: 0px;
+  left: -300px;
+  -webkit-animation: 100s linear 60s infinite running travel-square;
+          animation: 100s linear 60s infinite running travel-square;
+  z-index: -1;
+}
+
+@-webkit-keyframes travel-octo {
+  from {
+    left: -300px;
+    top: 550px;
+  }
+  to {
+    left: 100%;
+    top: 0px;
+  }
+}
+
+@keyframes travel-octo {
+  from {
+    left: -300px;
+    top: 550px;
+  }
+  to {
+    left: 100%;
+    top: 0px;
+  }
+}
+@-webkit-keyframes travel-star {
+  from {
+    left: -300px;
+    top: 1550px;
+  }
+  to {
+    left: 100%;
+    top: 1200px;
+  }
+}
+@keyframes travel-star {
+  from {
+    left: -300px;
+    top: 1550px;
+  }
+  to {
+    left: 100%;
+    top: 1200px;
+  }
+}
+@-webkit-keyframes travel-circle {
+  from {
+    left: -300px;
+    top: 0px;
+  }
+  to {
+    left: 100%;
+    top: 1350px;
+  }
+}
+@keyframes travel-circle {
+  from {
+    left: -300px;
+    top: 0px;
+  }
+  to {
+    left: 100%;
+    top: 1350px;
+  }
+}
+@-webkit-keyframes travel-triangle {
+  from {
+    left: -300px;
+    top: 1100px;
+  }
+  to {
+    left: 100%;
+    top: 2200px;
+  }
+}
+@keyframes travel-triangle {
+  from {
+    left: -300px;
+    top: 1100px;
+  }
+  to {
+    left: 100%;
+    top: 2200px;
+  }
+}
+@-webkit-keyframes travel-square {
+  from {
+    left: -300px;
+    top: 0px;
+  }
+  to {
+    left: 100%;
+    top: 2100px;
+  }
+}
+@keyframes travel-square {
+  from {
+    left: -300px;
+    top: 0px;
+  }
+  to {
+    left: 100%;
+    top: 2100px;
+  }
+}
 .entry__page {
   background-color: black;
   position: fixed;
@@ -346,16 +502,23 @@ p {
   }
 }
 
+.sections-container {
+  position: relative;
+  overflow: hidden;
+}
+
 .section {
   position: absolute;
   transition: left 2s, opacity 5s;
   opacity: 0;
-  overflow-y: hidden;
-  max-height: 1000px;
 }
 .section--active {
   opacity: 100;
-  overflow-y: visible;
+}
+
+.animation-container {
+  position: relative;
+  overflow: hidden;
 }
 
 .projects {

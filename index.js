@@ -2,6 +2,8 @@ import interestsData from "./data.js";
 
 // $(".sections-container").css("height", "500px");
 
+const activeSection = document.querySelector(".section--active");
+
 $(".entry__button").click(() => {
   $(".entry__page").css("background-color", "transparent");
   $(".entry__container").css("opacity", "0");
@@ -19,13 +21,18 @@ $(".entry__button").click(() => {
 
 // Tab menu
 const sections = document.querySelectorAll(".section");
-
+const animationContainer = document.querySelector(".animation-container");
 const goToSection = (selectedSection) => {
   sections.forEach((section, i) => {
+    // console.log(section.getBoundingClientRect());
     section.style.left = `${(i - selectedSection) * 100}%`;
     section.classList.remove("section--active");
     if (Number(selectedSection) === i) {
       section.classList.add("section--active");
+      const maxH = section.getBoundingClientRect().height;
+      console.log(`${maxH}px`, animationContainer);
+      animationContainer.style.height = `${maxH}px`;
+      console.log(animationContainer.style);
     }
   });
 };
