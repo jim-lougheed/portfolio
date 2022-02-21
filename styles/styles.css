@@ -55,6 +55,10 @@ p {
   font-weight: bold;
 }
 
+.lazy-img {
+  filter: blur(20px);
+}
+
 .entry__page {
   background-color: black;
   position: fixed;

@@ -132,6 +132,33 @@ allCards.forEach((card) => {
   $(card).addClass("card--hidden");
 });
 
+// Lazy loading images
+
+const imgTargets = $("img[data-src]").toArray();
+
+const loadImg = (entries, observer) => {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    return;
+  } else {
+    entry.target.src = entry.target.dataset.src;
+
+    $(entry.target).on("load", () => {
+      $(entry.target).removeClass("lazy-img");
+      observer.unobserve(entry.target);
+    });
+  }
+};
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  rootMargin: "100px",
+  threshold: 0,
+});
+
+imgTargets.forEach((img) => {
+  imgObserver.observe(img);
+});
+
 // Initialization
 
 const init = () => {
