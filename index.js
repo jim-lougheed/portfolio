@@ -108,6 +108,30 @@ const displayMore = (e) => {
   $(spec.nextElementSibling).toggleClass("interest__detail--active");
 };
 
+// Reveal sections upon scroll
+
+const allCards = $(".card").toArray();
+
+const revealSection = (entries, observer) => {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    return;
+  } else {
+    $(entry.target).removeClass("card--hidden");
+    observer.unobserve(entry.target);
+  }
+};
+const revealOptions = {
+  root: null,
+  threshold: 0.1,
+};
+const sectionObserver = new IntersectionObserver(revealSection, revealOptions);
+
+allCards.forEach((card) => {
+  sectionObserver.observe(card);
+  $(card).addClass("card--hidden");
+});
+
 // Initialization
 
 const init = () => {

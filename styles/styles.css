@@ -360,6 +360,15 @@ p {
   opacity: 100;
 }
 
+.card {
+  transition: transform 1s, opacity 1s;
+}
+
+.card--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
 .projects {
   margin: 0 auto;
   width: 100%;
