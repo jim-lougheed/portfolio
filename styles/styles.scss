@@ -1,4 +1,6 @@
 @use "./sizings.scss";
+@use "./animations.scss";
+@use "./globals.scss";
 
 body {
   font-family: "Georama", sans-serif;
@@ -47,117 +49,6 @@ p {
 
 .text-bold {
   font-weight: bold;
-}
-
-// Animated shapes
-.background-octo {
-  width: clamp(100px, 30vw, 300px);
-  height: clamp(100px, 30vw, 300px);
-
-  position: absolute;
-  top: 550px;
-  left: -300px;
-
-  animation: 75s linear 0s infinite running travel-octo;
-  z-index: -1;
-}
-
-.background-star {
-  width: clamp(100px, 30vw, 300px);
-  height: clamp(100px, 30vw, 300px);
-
-  position: absolute;
-  top: 1550px;
-  left: -300px;
-
-  animation: 70s linear 15s infinite running travel-star;
-  z-index: -1;
-}
-
-.background-circle {
-  width: clamp(100px, 30vw, 300px);
-  height: clamp(100px, 30vw, 300px);
-
-  position: absolute;
-  top: 0px;
-  left: -300px;
-
-  animation: 60s linear 45s infinite running travel-circle;
-  z-index: -1;
-}
-.background-triangle {
-  width: clamp(100px, 30vw, 300px);
-  height: clamp(100px, 30vw, 300px);
-
-  position: absolute;
-  top: 1100px;
-  left: -300px;
-
-  animation: 45s linear 30s infinite running travel-triangle;
-  z-index: -1;
-}
-.background-square {
-  width: clamp(100px, 30vw, 300px);
-  height: clamp(100px, 30vw, 300px);
-
-  position: absolute;
-  top: 0px;
-  left: -300px;
-
-  animation: 100s linear 60s infinite running travel-square;
-  z-index: -1;
-}
-
-@keyframes travel-octo {
-  from {
-    left: -300px;
-    top: 550px;
-  }
-  to {
-    left: 100%;
-    top: 0px;
-  }
-}
-@keyframes travel-star {
-  from {
-    left: -300px;
-    top: 1550px;
-  }
-  to {
-    left: 100%;
-    top: 1200px;
-  }
-}
-@keyframes travel-circle {
-  from {
-    left: -300px;
-    top: 0px;
-  }
-  to {
-    left: 100%;
-    top: 1350px;
-  }
-}
-@keyframes travel-triangle {
-  from {
-    left: -300px;
-    top: 1100px;
-  }
-  to {
-    left: 100%;
-    top: 2200px;
-  }
-}
-
-@keyframes travel-square {
-  from {
-    left: -300px;
-    top: 0px;
-  }
-  to {
-    left: 100%;
-    top: 2100px;
-  }
 }
 
 // Entry screen and animation
@@ -318,7 +209,7 @@ p {
       width: 50%;
     }
     &--hero {
-      background: url("../images/images/hero.png");
+      background: url("../assets/images/hero.png");
       background-size: cover;
       background-position: center;
       @supports (mix-blend-mode: multiply) {
@@ -423,272 +314,73 @@ p {
   }
 }
 
+// Main
 .sections-container {
   position: relative;
   overflow: hidden;
 }
 
-// Info section
 .section {
   position: absolute;
   transition: left 2s, opacity 5s;
   opacity: 0;
-  // overflow-y: hidden;
-  // max-height: 100px;
   &--active {
     opacity: 100;
-    // overflow-y: visible;
   }
-}
-
-.animation-container {
-  position: relative;
-  // height: 2500px;
-  overflow: hidden;
 }
 
 // Projects section
 .projects {
-  margin: 0 auto;
-  width: 100%;
-  &__title {
-    text-align: center;
-    @include sizings.tabdesk {
-      margin: 2rem auto 0;
-    }
-  }
+  @include globals.section;
   &__container {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto 5rem;
-    width: clamp(200px, 75%, 1000px);
-    @include sizings.mobile {
-      justify-content: center;
-      align-items: center;
-    }
-    @include sizings.tabdesk {
-      justify-content: space-evenly;
-    }
+    @include globals.projects-interests-container;
   }
 }
 
 .project {
-  &__card {
-    background-color: var(--lightpurple);
-    border-radius: 50px;
-    box-shadow: 12px 12px 3px 1px var(--green);
-    @include sizings.mobile {
-      padding: 2rem 0;
-      margin-bottom: 2rem;
-    }
-    @include sizings.tabdesk {
-      margin: 2rem auto;
-      padding-top: 1rem;
-      position: relative;
-    }
-  }
-  &__image {
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid var(--green);
-    height: 200px;
-    width: 200px;
-    @include sizings.desktop {
-      position: absolute;
-      top: -25px;
-      &--left {
-        left: -50px;
-      }
-      &--right {
-        right: -50px;
-      }
-    }
-  }
-  &__body {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    margin: 1rem 10% 0;
-    @include sizings.desktop {
-      margin: 0 175px;
-      padding: 2rem 0;
-    }
-  }
+  @include globals.project-interest-card;
   &__title-link-container {
     display: flex;
     align-items: center;
   }
-  &__title {
-    margin: 0;
-    @include sizings.mobile {
-      font-size: 1.5rem;
-    }
-    @include sizings.tabdesk {
-      font-size: 2rem;
-    }
-    &:hover {
-      color: var(--green-hover);
-    }
+  &__title:hover {
+    color: var(--green-hover);
   }
   &__github-icon {
     margin-left: 1rem;
     width: 2rem;
-  }
-  &__description {
-    margin: 1rem 0;
-    @include sizings.mobile {
-      font-size: 0.85rem;
-    }
   }
   &__specs {
     display: flex;
   }
   &__spec {
     margin-right: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    @include sizings.mobile {
-      font-size: 1rem;
-    }
-    &--active {
-      border-bottom: 2px solid var(--green);
-      font-weight: 700;
-    }
-  }
-  &__detail {
-    display: none;
-    @include sizings.mobile {
-      font-size: 0.85rem;
-    }
-    &--active {
-      display: block;
-    }
   }
 }
 
 // Interests section
 .interests {
-  margin: 0 auto;
-  width: 100%;
-  &__title {
-    text-align: center;
-    @include sizings.tabdesk {
-      margin: 2rem auto 0;
-    }
-  }
+  @include globals.section;
   &__container {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto 5rem;
-    width: clamp(200px, 75%, 1000px);
-    @include sizings.mobile {
-      justify-content: center;
-      align-items: center;
-    }
-    @include sizings.tabdesk {
-      justify-content: space-evenly;
-    }
+    @include globals.projects-interests-container;
   }
 }
 
 .interest {
-  &__card {
-    background-color: var(--lightpurple);
-    border-radius: 50px;
-    box-shadow: 12px 12px 3px 1px var(--green);
-    @include sizings.mobile {
-      padding: 2rem 0;
-      margin-bottom: 2rem;
-    }
-    @include sizings.tabdesk {
-      margin: 2rem auto;
-      padding-top: 1rem;
-      position: relative;
-    }
-  }
-  &__image {
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid var(--green);
-    height: 200px;
-    width: 200px;
-    @include sizings.desktop {
-      position: absolute;
-      top: -25px;
-      &--left {
-        left: -50px;
-      }
-      &--right {
-        right: -50px;
-      }
-    }
-  }
-  &__body {
-    display: flex;
-    flex-direction: column;
-    // align-items: flex-start;
-    text-align: left;
-    margin: 1rem 10% 0;
-    @include sizings.desktop {
-      margin: 0 175px;
-      padding: 2rem 0;
-    }
-  }
-  &__title {
-    margin: 0;
-    @include sizings.mobile {
-      font-size: 1.5rem;
-    }
-    @include sizings.tabdesk {
-      font-size: 2rem;
-    }
-  }
-  &__description {
-    margin: 1rem 0;
-    @include sizings.mobile {
-      font-size: 0.85rem;
-    }
-  }
+  @include globals.project-interest-card;
   &__spec {
-    font-weight: 500;
-    cursor: pointer;
     width: 60px;
-    @include sizings.mobile {
-      font-size: 1rem;
-    }
-    &--active {
-      border-bottom: 2px solid var(--green);
-      font-weight: 700;
-    }
-  }
-  &__detail {
-    display: none;
-    @include sizings.mobile {
-      font-size: 0.85rem;
-    }
-    &--active {
-      display: block;
-    }
   }
 }
 
 // Contact section
 .cta {
-  margin: 0 auto;
-  width: 100%;
-  &__title {
-    text-align: center;
-    @include sizings.tabdesk {
-      margin: 2rem auto 0;
-    }
-  }
+  @include globals.section;
   &__container {
     background: var(--lightpurple);
     border-radius: 50px;
     margin: 2rem auto 5rem;
     padding: 2rem;
-    width: clamp(200px, 50vw, 1000px);
     box-shadow: 12px 12px 3px 1px var(--green);
   }
   &__blurb1 {
@@ -699,6 +391,9 @@ p {
       font-size: 2rem;
     }
   }
+  &__blurb2 {
+    max-width: 500px;
+  }
   &__blurb1,
   &__blurb2 {
     padding: 1rem;
@@ -708,7 +403,7 @@ p {
     display: flex;
   }
   &__background {
-    background-image: url("../images/icons/contact-us.png");
+    background-image: url("../assets/images/contact-us.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
@@ -730,16 +425,50 @@ p {
     margin: 0.5rem;
     width: clamp(3rem, 4vw, 5rem);
   }
+  &__cv-link {
+    color: var(--green);
+    vertical-align: middle;
+  }
+  &__cv-icon {
+    margin: 0.5rem;
+    vertical-align: middle;
+    width: 2rem;
+  }
   &__detail {
     color: var(--textblack);
   }
 }
 
+// Animated shapes
+.animation-container {
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.background-octo {
+  @include animations.background-shape(octo, 550px, 0px, 0s);
+}
+
+.background-star {
+  @include animations.background-shape(star, 1550px, 1200px, 15s);
+}
+
+.background-circle {
+  @include animations.background-shape(circle, 0px, 1350px, 45s);
+}
+
+.background-triangle {
+  @include animations.background-shape(triangle, 1100px, 2200px, 30s);
+}
+
+.background-square {
+  @include animations.background-shape(square, 2200px, 100px, 60s);
+}
+
 // Footer
 .footer {
   background-color: var(--green);
-  bottom: 0;
-  position: fixed;
   width: 100%;
   &__link-container {
     display: flex;
@@ -755,6 +484,7 @@ p {
   &__copyright {
     color: #eaf6f6;
     font-size: 1em;
-    margin: 1rem auto;
+    padding: 1rem;
+    margin: 0;
   }
 }

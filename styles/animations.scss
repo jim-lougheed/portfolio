@@ -1,0 +1,26 @@
+@mixin background-shape($shape, $topStart, $topEnd, $delay) {
+  width: clamp(100px, 30vw, 300px);
+  height: clamp(100px, 30vw, 300px);
+
+  position: absolute;
+  top: $topStart;
+  left: -300px;
+
+  animation: 60s linear $delay infinite running $shape;
+  z-index: -1;
+
+  @include shapeAnimation($shape, $topStart, $topEnd);
+}
+
+@mixin shapeAnimation($shape, $topStart, $topEnd) {
+  @keyframes #{$shape} {
+    from {
+      left: -330px;
+      top: $topStart;
+    }
+    to {
+      left: 100%;
+      top: $topEnd;
+    }
+  }
+}
