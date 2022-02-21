@@ -1,0 +1,108 @@
+@use "./sizings.scss";
+
+@mixin section {
+  margin: 0 auto;
+  width: 100%;
+  &__title {
+    text-align: center;
+    @include sizings.tabdesk {
+      margin: 2rem auto 0;
+    }
+  }
+  &__container {
+    width: clamp(200px, 75%, 1000px);
+  }
+}
+
+@mixin projects-interests-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 5rem;
+  @include sizings.mobile {
+    justify-content: center;
+    align-items: center;
+  }
+  @include sizings.tabdesk {
+    justify-content: space-evenly;
+  }
+}
+
+@mixin project-interest-card {
+  &__card {
+    background-color: var(--lightpurple);
+    border-radius: 50px;
+    box-shadow: 12px 12px 3px 1px var(--green);
+    @include sizings.mobile {
+      padding: 2rem 0;
+      margin-bottom: 2rem;
+    }
+    @include sizings.tabdesk {
+      margin: 2rem auto;
+      padding-top: 1rem;
+      position: relative;
+    }
+  }
+  &__image {
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--green);
+    height: 200px;
+    width: 200px;
+    @include sizings.desktop {
+      position: absolute;
+      top: -25px;
+      &--left {
+        left: -50px;
+      }
+      &--right {
+        right: -50px;
+      }
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    //   align-items: flex-start;
+    text-align: left;
+    margin: 1rem 10% 0;
+    @include sizings.desktop {
+      margin: 0 175px;
+      padding: 2rem 0;
+    }
+  }
+  &__title {
+    margin: 0;
+    @include sizings.mobile {
+      font-size: 1.5rem;
+    }
+    @include sizings.tabdesk {
+      font-size: 2rem;
+    }
+  }
+  &__description {
+    margin: 1rem 0;
+    @include sizings.mobile {
+      font-size: 0.85rem;
+    }
+  }
+  &__spec {
+    font-weight: 500;
+    cursor: pointer;
+    @include sizings.mobile {
+      font-size: 1rem;
+    }
+    &--active {
+      border-bottom: 2px solid var(--green);
+      font-weight: 700;
+    }
+  }
+  &__detail {
+    display: none;
+    @include sizings.mobile {
+      font-size: 0.85rem;
+    }
+    &--active {
+      display: block;
+    }
+  }
+}

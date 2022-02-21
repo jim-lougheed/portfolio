@@ -10,24 +10,24 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="images/images/apple-touch-icon.png"
+      href="./assets/images/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="images/images/favicon-32x32.png"
+      href="./assets/images/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="images/images/favicon-16x16.png"
+      href="./assets/images/favicon-16x16.png"
     />
     <link rel="manifest" href="images/images/site.webmanifest" />
     <link
       rel="mask-icon"
-      href="images/images/safari-pinned-tab.svg"
+      href="./assets/images/safari-pinned-tab.svg"
       color="#5bbad5"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,7 +58,7 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-YXNEGSCHN0");
+      gtag("config", "G-YXNEGSCHN0", {cookie_flags: 'SameSite=None;Secure'});
     </script>
   </head>
   <body>
@@ -75,8 +75,8 @@
           </div>
           <img
             class="entry__avatar"
-            src="images/images/android-chrome-192x192.png"
-            alt="Jim"
+            src="./assets/images/android-chrome-192x192.png"
+            alt="Jim profile photo"
           />
           <div class="entry__bio-section entry__bio-section--2">
             <h1 class="entry__header entry__header--bio-2">I'm Jim</h1>
@@ -95,38 +95,40 @@
       <div
         class="header__container header__container--hero header__container--before"
       ></div>
-      <div class="header__container header__container--bio">
+      <section class="header__container header__container--bio">
         <img
           class="header__avatar"
-          src="images/images/android-chrome-192x192.png"
-          alt="Jim"
+          src="./assets/images/profile-pic-4.jpg"
+          alt="Jim profile photo"
         />
         <div class="header__socials">
           <a
             class="header__social-link"
             href="https://www.linkedin.com/in/jim-lougheed/"
+            target="_blank"
             ><img
-              src="images/icons/linkedin-brands-green.svg"
+              src="./assets/icons/linkedin-brands-green.svg"
               alt="linkedin icon"
               class="header__social-icon"
           /></a>
-          <a class="header__social-link" href="https://github.com/jim-lougheed"
+          <a class="header__social-link" href="https://github.com/jim-lougheed" target="_blank"
             ><img
-              src="images/icons/github-square-brands-green.svg"
+              src="./assets/icons/github-square-brands-green.svg"
               alt="github icon"
               class="header__social-icon"
           /></a>
-          <a class="header__social-link" href="https://twitter.com/JimsCodes"
+          <a class="header__social-link" href="https://twitter.com/JimsCodes" target="_blank"
             ><img
-              src="images/icons/twitter-square-brands-green.svg"
+              src="./assets/icons/twitter-square-brands-green.svg"
               alt="twitter icon"
               class="header__social-icon"
           /></a>
           <a
             class="header__social-link"
             href="https://www.instagram.com/fader08/?hl=en"
+            target="_blank"
             ><img
-              src="images/icons/instagram-square-brands-green.svg"
+              src="./assets/icons/instagram-square-brands-green.svg"
               alt="instagram icon"
               class="header__social-icon"
           /></a>
@@ -136,38 +138,39 @@
           both human and computer. I love to explore the ways through which we
           encode and decode the messages we convey to each other.
         </p>
-      </div>
+      </section>
       <div
         class="header__container header__container--hero header__container--after"
       ></div>
     </header>
-    <div class="sections-nav">
+    <nav class="sections-nav">
       <p class="sections-nav__link" data-section="0">Projects</p>
       <p class="sections-nav__link-break">|</p>
       <p class="sections-nav__link" data-section="1">Interests</p>
       <p class="sections-nav__link-break">|</p>
       <p class="sections-nav__link" data-section="2">Contact</p>
-    </div>
-    <section class="sections-container">
-      <div class="projects section section--0 section--active">
+    </nav>
+    <main class="sections-container">
+      <section class="projects section section--0 section--active">
         <h2 class="projects__title">My Projects</h2>
         <div class="projects__container">
-          <div class="card project__card">
+          <article class="card project__card">
             <img
-              class="project__image project__image--left"
-              src="images/images/kitchen-companion.jpg"
-              alt="kitchen companion"
+              class="project__image project__image--left lazy-img"
+              src="./assets/logos/kitchen-companion-lazy.jpg"
+              data-src="./assets/logos/kitchen-companion.jpg"
+              alt="kitchen companion logo"
             />
             <div class="project__body project__body--left">
               <div class="project__title-link-container">
-                <a href="https://kitchen-companion.herokuapp.com/">
+                <a href="https://kitchen-companion.herokuapp.com/" target="_blank">
                   <h3 class="project__title">Kitchen Companion</h3>
                 </a>
                 <a
                   class="project__github-link"
-                  href="https://github.com/jim-lougheed/kitchen-companion"
+                  href="https://github.com/jim-lougheed/kitchen-companion target="_blank""
                   ><img
-                    src="images/icons/github-square-brands.svg"
+                    src="./assets/icons/github-square-brands.svg"
                     alt="github icon"
                     class="project__github-icon"
                 /></a>
@@ -186,7 +189,7 @@
                 <h3 class="project__spec" data-spec="2">Successes</h3>
               </div>
               <div class="project__details">
-                <div
+                <article
                   class="project__detail project__detail--active"
                   data-detail="0"
                 >
@@ -211,8 +214,8 @@
                     The application also uses a number of Ant Design components
                     for a smooth user experience.
                   </p>
-                </div>
-                <div class="project__detail" data-detail="1">
+                </article>
+                <article class="project__detail" data-detail="1">
                   <p>
                     I initially explored several different recipe APIs to find
                     the functionality I wanted. After selecting one, I ended up
@@ -225,8 +228,8 @@
                     able to modify the dependency package to get the results I
                     wanted after many hours of scouring Stack Overflow.
                   </p>
-                </div>
-                <div class="project__detail" data-detail="2">
+                </article>
+                <article class="project__detail" data-detail="2">
                   <p>
                     With only two weeks to get a working product, I was amazed
                     at what I could build in such a short amount of time.
@@ -243,26 +246,28 @@
                     GitHub and using my own dependency in the project -
                     something I would not have had to experiment with otherwise.
                   </p>
-                </div>
+                </article>
               </div>
             </div>
-          </div>
-          <div class="card project__card">
+          </article>
+          <article class="card project__card">
             <img
-              class="project__image project__image--right"
-              src="images/images/encounterDex.png"
-              alt="encounter dex"
+              class="project__image project__image--right lazy-img"
+              src="./assets/logos/encounterDex-lazy.png"
+              data-src="./assets/logos/encounterDex.png"
+              alt="encounter dex logo"
             />
             <div class="project__body project__body--right">
               <div class="project__title-link-container">
-                <a href="https://encounterdex.herokuapp.com/">
+                <a href="https://encounterdex.herokuapp.com/" target="_blank">
                   <h3 class="project__title">encounterDex</h3>
                 </a>
                 <a
                   class="project__github-link"
                   href="https://github.com/jim-lougheed/encounterDexBDSP"
+                  target="_blank"
                   ><img
-                    src="images/icons/github-square-brands.svg"
+                    src="./assets/icons/github-square-brands.svg"
                     alt="github icon"
                     class="project__github-icon"
                 /></a>
@@ -282,7 +287,7 @@
                 <h3 class="project__spec" data-spec="2">Successes</h3>
               </div>
               <div class="project__details">
-                <div
+                <article
                   class="project__detail project__detail--active"
                   data-detail="0"
                 >
@@ -296,8 +301,8 @@
                     Node back end, while the front end filters data to sort
                     encounter methods, conditions and Pokemon levels.
                   </p>
-                </div>
-                <div class="project__detail" data-detail="1">
+                </article>
+                <article class="project__detail" data-detail="1">
                   <p>
                     As I moved the information retrieved from the API down
                     through the components, it became increasingly challenging
@@ -308,12 +313,12 @@
                     responsiveness. However, I was able to learn much more about
                     how Grid really works.
                   </p>
-                </div>
-                <div class="project__detail" data-detail="2">
+                </article>
+                <article class="project__detail" data-detail="2">
                   <p>
                     This project really helped me cement my understanding of
                     JavaScript higher-order functions, as I often needed to use
-                    .map(), .filter(), and .any() in order to separate and
+                    <code>.map()</code>, <code>.filter()</code>, and <code>.any()</code> in order to separate and
                     compile retrieved information to display in the appropriate
                     component.
                   </p>
@@ -324,26 +329,27 @@
                     able, I will be adding this information in without adjusting
                     the app's functionality.
                   </p>
-                </div>
+                </article>
               </div>
             </div>
-          </div>
-          <div class="card project__card">
+          </article>
+          <article class="card project__card">
             <img
-                class="project__image project__image--left"
-                src="images/images/simon-game.png"
-                alt="simon game"
+                class="project__image project__image--left lazy-img"
+                src="./assets/logos/simon-game-lazy.png"
+                data-src="./assets/logos/simon-game.png"
+                alt="simon game logo"
               />
             <div class="project__body project__body--left">
               <div class="project__title-link-container">
-                <a href="https://jim-lougheed.github.io/SimonGame/">
+                <a href="https://jim-lougheed.github.io/SimonGame/" target="_blank">
                   <h3 class="project__title">The Simon Game</h3>
                 </a>
                 <a
                   class="project__github-link"
-                  href="https://github.com/jim-lougheed/SimonGame"
+                  href="https://github.com/jim-lougheed/SimonGame" target="_blank"
                   ><img
-                    src="images/icons/github-square-brands.svg"
+                    src="./assets/icons/github-square-brands.svg"
                     alt="github icon"
                     class="project__github-icon"
                 /></a>
@@ -351,7 +357,7 @@
               <p class="project__description">
                 A challenge project from Angela Yu's
                 <a
-                  href="https://www.udemy.com/course/the-complete-web-development-bootcamp/"
+                  href="https://www.udemy.com/course/the-complete-web-development-bootcamp/" target="_blank"
                   >Complete Web Development Bootcamp</a
                 >, this simple JavaScript game is simple to play. With each
                 turn, a square will light up and add to a sequence. It's your
@@ -366,7 +372,7 @@
                 <h3 class="project__spec" data-spec="2">Successes</h3>
               </div>
               <div class="project__details">
-                <div
+                <article
                   class="project__detail project__detail--active"
                   data-detail="0"
                 >
@@ -377,8 +383,8 @@
                     the game, the other clicked by the player - and compares
                     them before proceeding or restarting the game.
                   </p>
-                </div>
-                <div class="project__detail" data-detail="1">
+                </article>
+                <article class="project__detail" data-detail="1">
                   <p>
                     As my first JavaScript project, this game really challenged
                     my understanding of using functions to follow logic.
@@ -390,8 +396,8 @@
                     through and add to arrays, and then to validate their
                     values.
                   </p>
-                </div>
-                <div class="project__detail" data-detail="2">
+                </article>
+                <article class="project__detail" data-detail="2">
                   <p>
                     Completing this challenge solidified my grasp of project
                     flow and the importance of breaking down tasks.
@@ -400,34 +406,24 @@
                     It also showed me the advantage of clean, reusable code to
                     make it easier to understand and use.
                   </p>
-                </div>
+                </article>
               </div>
             </div>
-          </div>
-          <!-- <div class="card project__card">
-      <div class="card-body">
-        <img class="project__image" src="images/images/dino-game.png" alt="dino game">
-        <a href="https://jim-lougheed.github.io/dino-game/">
-          <h3 class="project__header">Dino Game</h3>
-        </a>
-        <p class="projects__description">This clone of the Chrome Dino game is based on a JavaScript tutorial from <a href="https://www.youtube.com/watch?v=47eXVRJKdkU">Web Dev Simplified</a> but created using React. Press any key to start running and jump over the oncoming cacti!</p>
-          
-      </div>
-    </div> -->
+          </article>
         </div>
-      </div>
-
-      <div class="interests section section--1">
+      </section>
+      <section class="interests section section--1">
         <h2 class="interests__title">My Interests</h2>
         <div class="interests__container">
-          <div class="card interest__card">
+          <article class="card interest__card">
             <img
-              class="interest__image interest__image--left"
-              src="images/images/code.jpeg"
-              alt="web development"
+              class="interest__image interest__image--left lazy-img"
+              src="./assets/images/code-lazy.jpeg"
+              data-src="./assets/images/code.jpeg"
+              alt="computer code"
             />
             <div class="interest__body interest__body--left">
-                  <h3 class="interest__title">Web Development</h3>
+              <h3 class="interest__title">Web Development</h3>
               <p class="interest__description">
                 Last year, a couple good friends introduced me to the world of
                 web development. Although my previous roles were challenging in
@@ -442,31 +438,31 @@
                 <h3 class="interest__spec">
                   More <span class="interest__spec-arrow">↓</span>
                 </h3>
-                <div class="interest__detail">
+                <article class="interest__detail">
                   <p><span class='text-bold'>Tech Stack:</span></p>
-                  
                     <span class='text-bold'>Languages:</span> HTML, CSS (SASS), JavaScript (Node.js, EJS), php,
                     Dart</br>
                     <span class='text-bold'>Libraries:</span> React, jQuery, Axios, Flutter</br>
                     <span class='text-bold'>Frameworks:</span> Express.js, Bootstrap, Ant Design</br>
-                      <span class='text-bold'>Databases:</span> MySQL (Knex), MongoDB (Mongoose)</br>
-                        <span class='text-bold'>APIs:</span> DOM APIs, Web APIs (Spoonacular, PokéAPI)</br>
-                          <span class='text-bold'>Version control:</span> Git, GitHub</br>
-                            <span class='text-bold'>Methodologies:</span> Agile (JIRA, Kanban), BEM</br>
-                              <span class='text-bold'>Deployment: Heroku, Netlify</span>
+                    <span class='text-bold'>Databases:</span> MySQL (Knex), MongoDB (Mongoose)</br>
+                    <span class='text-bold'>APIs:</span> DOM APIs, Web APIs (Spoonacular, PokéAPI)</br>
+                    <span class='text-bold'>Version control:</span> Git, GitHub</br>
+                    <span class='text-bold'>Methodologies:</span> Agile (JIRA, Kanban), BEM</br>
+                    <span class='text-bold'>Deployment:</span> Heroku, Netlify
                   </p>
-                </div>
+                </article>
               </div>
             </div>
-          </div>
-          <div class="card interest__card">
+          </article>
+          <article class="card interest__card">
             <img
-              class="interest__image interest__image--right"
-              src="images/images/languages.jpg"
-              alt="languages"
+              class="interest__image interest__image--right lazy-img"
+              src="./assets/images/languages-lazy.jpg"
+              data-src="./assets/images/languages.jpg"
+              alt="phrase in various languages"
             />
             <div class="interest__body interest__body--right">
-                  <h3 class="interest__title">Language</h3>
+              <h3 class="interest__title">Language</h3>
               <p class="interest__description">
                 I'm obsessed with the countless ways we can use sounds and
                 symbols to convey complex ideas to one another (often
@@ -479,27 +475,26 @@
                 <h3 class="interest__spec">
                   More <span class="interest__spec-arrow">↓</span>
                 </h3>
-                <div class="interest__detail">
+                <article class="interest__detail">
                 <p><span class='text-bold'>Languages:</span></p>
-                  <br>
                     <span class='text-bold'>Native:</span> English</br>
                     <span class='text-bold'>Advanced:</span> French</br>
-                      <span class='text-bold'>Intermediate:</span> Mandarin</br>
-                        <span class='text-bold'>Beginner/Casual:</span> Arabic, Cantonese, German, Malay, Spanish, Swedish</br>
+                    <span class='text-bold'>Intermediate:</span> Mandarin</br>
+                    <span class='text-bold'>Beginner/Casual:</span> Arabic, Cantonese, German, Malay, Spanish, Swedish</br>
                   </p>
-                </div>
+                </article>
               </div>
             </div>
-          </div>
-          <div class="card interest__card">
+          </article>
+          <article class="card interest__card">
             <img
-                class="interest__image interest__image--left"
-                src="images/images/cake.jpg"
-                alt="baking"
+                class="interest__image interest__image--left lazy-img"
+                src="./assets/images/cake-lazy.jpg"
+                data-src="./assets/images/cake.jpg"
+                alt="cake"
               />
             <div class="interest__body interest__body--left">
-              
-                  <h3 class="interest__title">Baking</h3>
+              <h3 class="interest__title">Baking</h3>
               <p class="interest__description">
                 It's no secret I have a killer sweettooth, nor is it that it is spoiled
                 with desserts and goodies. Due in part to the Great Canadian
@@ -512,45 +507,47 @@
                 <h3 class="interest__spec">
                   More <span class="interest__spec-arrow">↓</span>
                 </h3>
-                <div class="interest__detail">
+                <article class="interest__detail">
                   <p><span class='text-bold'>My specialties:</span> macarons (they're easier than they look!), croissants, cakes & cookies.</p>
-                  <p>Check out <a href='https://www.instagram.com/fader08/?hl=en'>my Instagram</a> for more!</p>
-                </div>
+                  <p>Check out <a href='https://www.instagram.com/fader08/?hl=en' target="_blank">my Instagram</a> for more!</p>
+                </article>
               </div>
             </div>
-          </div>
-          <div class="card interest__card">
+          </article>
+          <article class="card interest__card">
             <img
-                class="interest__image interest__image--right"
-                src="images/images/piano.jpg"
+                class="interest__image interest__image--right lazy-img"
+                src="./assets/images/piano-lazy.jpg"
+                data-src="./assets/images/piano.jpg"
                 alt="piano"
               />
-            <div class="interest__body interest__body--right">
-                  <h3 class="interest__title">Piano</h3>
-              <p class="interest__description">
-                Sitting down at the bench and turning scribblings into
-                melodies never fails to transport me to another world. Since I was a wee lad,
-                I have been in love with creating music and putting my emotions into the ether. It's a beautiful thing.
-              </p>
-              <div class="interest__specs">
-                <h3 class="interest__spec">
-                  More <span class="interest__spec-arrow">↓</span>
-                </h3>
-                <div class="interest__detail">
-                  <p>I have my Grade 8 Piano from the Royal Conservatory of Music, and I perform semi-annually with Lupton Street Studios in fundraisers.</p>
-                  <p>I also play the trumpet!</p>
+              <div class="interest__body interest__body--right">
+                <h3 class="interest__title">Piano</h3>
+                <p class="interest__description">
+                  Sitting down at the bench and turning scribblings into
+                  melodies never fails to transport me to another world. Since I was a wee lad,
+                  I have been in love with creating music and putting my emotions into the ether. It's a beautiful thing.
+                </p>
+                <div class="interest__specs">
+                  <h3 class="interest__spec">
+                    More <span class="interest__spec-arrow">↓</span>
+                  </h3>
+                  <article class="interest__detail">
+                    <p>I have my Grade 8 Piano from the Royal Conservatory of Music, and I perform semi-annually with Lupton Street Studios in fundraisers.</p>
+                    <p>I also play the trumpet!</p>
+                  </article>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="card interest__card">
+          </article>
+          <article class="card interest__card">
             <img
-                class="interest__image interest__image--left"
-                src="images/images/video-games.jpg"
+                class="interest__image interest__image--left lazy-img"
+                src="./assets/images/video-games-lazy.jpg"
+                data-src="./assets/images/video-games.jpg"
                 alt="video games"
               />
             <div class="interest__body interest__body--left">
-                  <h3 class="interest__title">Video Games</h3>
+              <h3 class="interest__title">Video Games</h3>
               <p class="interest__description">
                 From the moment I received my first console (Nintendo 64) one Christmas, I've had
                 a passion for gaming. A good game brings you into its
@@ -562,71 +559,80 @@
                 <h3 class="interest__spec">
                   More <span class="interest__spec-arrow">↓</span>
                 </h3>
-                <div class="interest__detail">
+                <article class="interest__detail">
                   <p>Video games also integrate with a number of other interests of mine: listening to beautiful soundtracks, finding and exploiting program bugs, examining game translations and localizations.</p>
                   <p>My favourite games include The Legend of Zelda (my fav being Majora's Mask), the Pokémon series, the Super Mario series (especially Mario Karts and Mario Partys), Banjo-Kazooie/Tooie, Octopath Traveler, Perfect Dark, and the list goes on...</p>
-                </div>
+                </article>
               </div>
             </div>
-          </div>
+          </article>
         </div>
-      </div>
-
-      <div class="cta section section--2" id="cta">
+      </section>
+      <section class="cta section section--2" id="cta">
         <h2 class="cta__title">Let's Chat</h2>
-        <div class="cta__container">
+        <div class="card cta__container">
+          <h3 class="cta__blurb1">
+            I love making applications that solve problems and build communities based on ideas, and I'd love to help you build yours!
+          </h3>
+          <p class="cta__blurb2">
+            Please contact me via any of the channels listed below to find out what I can do for you. You can learn more about my skills and experience by viewing by downloading my CV.
+          </p>
+          <a class='cta__cv-link' href="./assets/files/Jim_Lougheed_CV.pdf" download><img class='cta__cv-icon' src='./assets/icons/file-solid.svg' alt='CV download'/>My CV</a>
+          <div class="cta__background-details-container">
+            <div class="cta__background"></div>
+            <article class="cta__details-container">
+              <a href='https://www.linkedin.com/in/jim-lougheed/' target="_blank"><img
+                src="./assets/icons/square-linkedin.svg"
+                alt="LinkedIn icon"
+                class="cta__icon"
+                />
+              </a>
+              <p class="cta__detail">jim-lougheed</p>
+              <a href='https://github.com/jim-lougheed' target="_blank"><img
+                src="./assets/icons/square-github.svg"
+                alt="github icon"
+                class="cta__icon"
+                />
+              </a>
+              <p class="cta__detail">jim-lougheed</p>
+              <a href='https://twitter.com/JimsCodes' target="_blank"><img
+                src="./assets/icons/square-twitter.svg"
+                alt="twitter icon"
+                class="cta__icon"
+              /></a>
+              <p class="cta__detail">@JimsCodes</p>
+              <a href='https://www.instagram.com/fader08/?hl=en' target="_blank"><img
+                src="./assets/icons/square-insta.svg"
+                alt="instagram icon"
+                class="cta__icon"
+                />
+              </a>
+              <p class="cta__detail">@fader08</p>
+              <a href='mailto:jglougheed@gmail.com'><img
+                src="./assets/icons/square-mail.svg"
+                alt="email icon"
+                class="cta__icon"
+                />
+              </a>
+              <p class="cta__detail">jglougheed@gmail.com</p>
+            </article>
+          </div>
           <h3 class="cta__blurb1">
             Whether it be about technology, linguistics, science, books, or
-            whatever else, I'm always down for an exchange of ideas
+            whatever else, I'm always up for exchanging thoughts and ideas
           </h3>
-<div class="cta__background-details-container">
-  <div class="cta__background"></div>
-          <div class="cta__details-container">
-            <a href='https://www.linkedin.com/in/jim-lougheed/'><img
-              src="images/icons/square-linkedin.svg"
-              alt="LinkedIn icon"
-              class="cta__icon"
-            />
-          </a>
-            <p class="cta__detail">jim-lougheed</p>
-            <a href='https://github.com/jim-lougheed'><img
-              src="images/icons/square-github.svg"
-              alt=""
-              class="cta__icon"
-            />
-          </a>
-            <p class="cta__detail">jim-lougheed</p>
-            <a href='https://twitter.com/JimsCodes'><img
-              src="images/icons/square-twitter.svg"
-              alt=""
-              class="cta__icon"
-            /></a>
-            <p class="cta__detail">@JimsCodes</p>
-            <a href='https://www.instagram.com/fader08/?hl=en'><img
-              src="images/icons/square-insta.svg"
-              alt=""
-              class="cta__icon"
-            />
-          </a>
-            <p class="cta__detail">@fader08</p>
-            <a href='mailto:jglougheed@gmail.com'><img
-              src="images/icons/square-mail.svg"
-              alt=""
-              class="cta__icon"
-            />
-          </a>
-            <p class="cta__detail">jglougheed@gmail.com</p>
-          </div>
         </div>
-          <p class="cta__blurb2">
-            It's curiosity that killed the cat. But it is also what motivated
-            the Jim. Let's be curious together!
-          </p>
-        </div>
+      </section>
+      <div class="animation-container">
+        <img src='./assets/images/star-purple.svg' class="background-star"></img>
+        <img src='./assets/images/octo-purple.svg' class="background-octo"></img>
+        <img src='./assets/images/circle-green.svg' class="background-circle"></img>
+        <img src='./assets/images/triangle-green.svg' class="background-triangle"></img>
+        <img src='./assets/images/square-green.svg' class="background-square"></img>
       </div>
-    </section>
-    <div class="footer">
+    </main>
+    <footer class="footer">
       <p class="footer__copyright">© 2022 Jim Lougheed.</p>
-    </div>
+    </footer>
   </body>
 </html>
