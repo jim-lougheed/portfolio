@@ -253,11 +253,83 @@
           <article class="card project__card">
             <img
               class="project__image project__image--right lazy-img"
+              src="./assets/logos/whos-that-pokemon.png"
+              data-src="./assets/logos/whos-that-pokemon.png"
+              alt="encounter dex logo"
+            />
+            <div class="project__body project__body--right">
+              <div class="project__title-link-container">
+                <a href="https://whos-that-pokemon.fly.dev/" target="_blank">
+                  <h3 class="project__title">Who's That Pokémon?</h3>
+                </a>
+                <a
+                  class="project__github-link"
+                  href="https://github.com/jim-lougheed/whos-that-pokemon"
+                  target="_blank"
+                  ><img
+                    src="./assets/icons/github-square-brands.svg"
+                    alt="github icon"
+                    class="project__github-icon"
+                /></a>
+              </div>
+              <p class="project__description">
+                Think you're a Pokémon Master? Test your knowledge of Pokémon cries 
+                from all 1025 Pokémon. There are 3 levels of difficulty for you to 
+                choose from for Trainers to really show what they've got!
+              </p>
+              <div class="project__specs">
+                <h3 class="project__spec project__spec--active" data-spec="0">
+                  Tech Specs
+                </h3>
+                <h3 class="project__spec" data-spec="1">Challenges</h3>
+                <h3 class="project__spec" data-spec="2">Successes</h3>
+              </div>
+              <div class="project__details">
+                <article
+                  class="project__detail project__detail--active"
+                  data-detail="0"
+                >
+                  <p><span class='text-bold'>Front end:</span> Svelte, TypeScript</p>
+                  <p><span class='text-bold'>Back end:</span> Node.js, Express, PokéAPI, Axios</p>
+                  <p>
+                    This Svelte application calls the PokéAPI on the
+                    Node back end, while the front end manages UI 
+                    components to keep track of score, question count, 
+                    and response handling.
+                  </p>
+                </article>
+                <article class="project__detail" data-detail="1">
+                  <p>
+                    This was my first project built in Svelte, and learning 
+                    typical Svelte patterns and state management as I went 
+                    along took some research.
+                  </p>
+                  <p>
+                    As I went along, some of the limitations of data retrieved 
+                    in the PokéAPI required changes to expected behaviour and 
+                    functionality.
+                  </p>
+                </article>
+                <article class="project__detail" data-detail="2">
+                  <p>
+                    Svelte turned out to be intuitive and simpler to use than 
+                    some other JavaScript frameworks.
+                  </p>
+                  <p>
+                    Using Svelte state management was much simpler than I expected.
+                  </p>
+                </article>
+              </div>
+            </div>
+          </article>
+          <article class="card project__card">
+            <img
+              class="project__image project__image--left lazy-img"
               src="./assets/logos/encounterDex-lazy.png"
               data-src="./assets/logos/encounterDex.png"
               alt="encounter dex logo"
             />
-            <div class="project__body project__body--right">
+            <div class="project__body project__body--left">
               <div class="project__title-link-container">
                 <a href="https://encounterdex.fly.dev/" target="_blank">
                   <h3 class="project__title">encounterDex</h3>
@@ -335,12 +407,12 @@
           </article>
           <article class="card project__card">
             <img
-                class="project__image project__image--left lazy-img"
+                class="project__image project__image--right lazy-img"
                 src="./assets/logos/simon-game-lazy.png"
                 data-src="./assets/logos/simon-game.png"
                 alt="simon game logo"
               />
-            <div class="project__body project__body--left">
+            <div class="project__body project__body--right">
               <div class="project__title-link-container">
                 <a href="https://jim-lougheed.github.io/SimonGame/" target="_blank">
                   <h3 class="project__title">The Simon Game</h3>
